@@ -1,0 +1,418 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+/* ===========================
+   Base
+=========================== */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', Courier, monospace;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .light-g {
+    color: #626262;
+  }
+
+  .soft-bd-shadow {
+    border: 1px solid #e4e0e5;
+    box-shadow: 0 0 30px rgba(166, 158, 170, 0.15);
+  }
+
+  .hoverbutton:hover,
+  .scale-on-hover:hover {
+    transform: scale(1.04);
+    transition: transform .3s;
+  }
+
+  .childhoverbutton:hover * {
+    transform: scale(1.2);
+    transition: transform .4s;
+  }
+
+  .childhoverbutton:hover {
+    transform: scale(1.04);
+    transition: transform .4s;
+  }
+
+  .monte {
+    font-family: var(--font-montserrat), Arial, sans-serif;
+  }
+
+  .playfair {
+    font-family: var(--font-playfair-display), serif;
+  }
+
+  .text-primary {
+    color: #000e24;
+  }
+
+  .bg-primary {
+    background: #000e24;
+  }
+
+  /* ...all your other utility classes... */
+}
+
+
+.ls0{
+   letter-spacing: -0.05em;
+}
+.ls1{
+   letter-spacing: 0em;
+}
+.favick-nav a {
+    /* fon/t-family: "Montserrat", sans-serif; */
+
+    font-size: 12px;
+    font-weight: 600;
+ 
+    letter-spacing: .25em;
+    text-transform: uppercase;
+
+    color: #43474E;
+
+    transition: color .35s ease;
+}
+.favick-nav a:hover {
+    color: #D4AF37;
+}
+
+/* ===========================
+   TEXT COLORS
+=========================== */
+
+.text-primary {
+  color: #000e24;
+}
+
+.text-secondary {
+  color: #775a19;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.text-background {
+  color: #fcf9f8;
+}
+
+.text-surface {
+  color: #fcf9f8;
+}
+
+.text-on-background {
+  color: #1c1b1b;
+}
+
+.text-on-surface {
+  color: #1c1b1b;
+}
+
+.text-on-surface-variant {
+  color: #43474e;
+}
+
+.text-on-primary {
+  color: #ffffff;
+}
+
+.text-on-primary-container {
+  color: #718bb9;
+}
+
+.text-on-secondary {
+  color: #ffffff;
+}
+
+.text-on-secondary-container {
+  color: #785a1a;
+}
+
+.text-outline {
+  color: #74777f;
+}
+
+.text-outline-variant {
+  color: #c4c6d0;
+}
+
+.text-error {
+  color: #ba1a1a;
+}
+
+
+/* ===========================
+   BACKGROUND COLORS
+=========================== */
+
+.bg-primary {
+  background-color: #000e24;
+}
+
+.bg-primary-container {
+  background-color: #00234b;
+}
+
+.bg-secondary {
+  background-color: #775a19;
+}
+
+.bg-secondary-container {
+  background-color: #fed488;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+}
+
+.bg-background {
+  background-color: #fcf9f8;
+}
+
+.bg-surface {
+  background-color: #fcf9f8;
+}
+
+.bg-surface-dim {
+  background-color: #dcd9d9;
+}
+
+.bg-surface-bright {
+  background-color: #fcf9f8;
+}
+
+.bg-surface-variant {
+  background-color: #e5e2e1;
+}
+
+.bg-surface-container-lowest {
+  background-color: #ffffff;
+}
+
+.bg-surface-container-low {
+  background-color: #f6f3f2;
+}
+
+.bg-surface-container {
+  background-color: #f0eded;
+}
+
+.bg-surface-container-high {
+  background-color: #eae7e7;
+}
+
+.bg-surface-container-highest {
+  background-color: #e5e2e1;
+}
+
+.bg-error {
+  background-color: #ba1a1a;
+}
+
+.bg-error-container {
+  background-color: #ffdad6;
+}
+
+
+/* ===========================
+   BORDER COLORS
+=========================== */
+
+.border-primary {
+  border-color: #000e24;
+}
+
+.border-secondary {
+  border-color: #775a19;
+}
+
+.border-gold {
+  border-color: #d4af37;
+}
+
+.border-outline {
+  border-color: #74777f;
+}
+
+.border-outline-variant {
+  border-color: #c4c6d0;
+}
+
+.border-surface {
+  border-color: #fcf9f8;
+}
+
+.border-surface-variant {
+  border-color: #e5e2e1;
+}
+
+.border-error {
+  border-color: #ba1a1a;
+}
+
+
+/* ===========================
+   FILL COLORS (SVG)
+=========================== */
+
+.fill-primary {
+  fill: #000e24;
+}
+
+.fill-gold {
+  fill: #d4af37;
+}
+
+.fill-secondary {
+  fill: #775a19;
+}
+
+.fill-white {
+  fill: #ffffff;
+}
+
+
+/* ===========================
+   STROKE COLORS (SVG)
+=========================== */
+
+.stroke-primary {
+  stroke: #000e24;
+}
+
+.stroke-gold {
+stroke: #d4af37;
+}
+
+.stroke-secondary {
+  stroke: #775a19;
+}
+
+.stroke-outline {
+  stroke: #74777f;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 400px;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+
+    animation: heroFloat 2.5s ease-in-out infinite;
+}
+
+/* Golden animated border */
+.hero-image-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+
+    /* background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 20%,
+        #d4af37 35%,
+        #fff3b0 50%,
+        #d4af37 65%,
+        transparent 80%,
+        transparent 100%
+    ); */
+
+    background-size: 250% 250%;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    /* animation: borderShine 5s linear infinite; */
+}
+
+/* Image */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Floating animation */
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-10px);
+    }
+
+    45% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Golden border sweep */
+
+@keyframes borderShine {
+    from {
+        background-position: -250% 0;
+    }
+
+    to {
+        background-position: 250% 0;
+    }
+}

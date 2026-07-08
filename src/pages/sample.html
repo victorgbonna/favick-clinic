@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favick Skin Clinic | High-Fashion Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdea5",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#001b3d",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-high": "#eae7e7",
+                        "primary-container": "#00234b",
+                        "tertiary-container": "#212425",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "surface-variant": "#e5e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-container": "#785a1a",
+                        "surface-tint": "#455f8a",
+                        "tertiary-fixed": "#e1e3e4",
+                        "surface": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "on-primary-fixed-variant": "#2c4771",
+                        "on-surface-variant": "#43474e",
+                        "primary-fixed-dim": "#adc7f8",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "outline": "#74777f",
+                        "primary": "#000e24",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#261900",
+                        "on-tertiary-fixed": "#191c1d",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-container": "#898b8c",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#718bb9",
+                        "secondary-fixed-dim": "#e9c176",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fed488",
+                        "secondary": "#775a19",
+                        "inverse-primary": "#adc7f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "outline-variant": "#c4c6d0",
+                        "tertiary": "#0c0e0f",
+                        "gold": "#D4AF37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "stack-md": "32px",
+                        "stack-lg": "64px",
+                        "stack-xl": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "headline-display": ["Playfair Display"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                        "label-caps": ["11px", {"lineHeight": "1.0", "letterSpacing": "0.25em", "fontWeight": "600"}],
+                        "button": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-display": ["96px", {"lineHeight": "0.95", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-md": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .gold-rule {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            width: 100%;
+        }
+        .editorial-image-shadow {
+            box-shadow: 40px 40px 80px -20px rgba(0, 14, 36, 0.08);
+        }
+        .text-overlap {
+            text-shadow: 0 0 40px rgba(252, 249, 248, 0.8);
+        }
+        .water-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/water.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .mask-gold {
+            mask-image: linear-gradient(to right, black, transparent);
+            -webkit-mask-image: linear-gradient(to right, black, transparent);
+        }
+        .line-accent {
+            position: relative;
+        }
+        .line-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed w-full top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-outline-variant/5">
+<div class="flex justify-between items-center w-full px-margin-desktop py-5 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold tracking-tighter text-primary italic">
+            Favick
+        </div>
+<div class="hidden md:flex space-x-12 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-gold transition-colors" href="#">The Collection</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-gold transition-colors" href="#">Heritage</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-gold transition-colors" href="#">Studio</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-gold transition-colors" href="#">Inquire</a>
+<button class="px-8 py-3 bg-primary text-on-primary text-button font-button hover:bg-gold transition-all duration-500">
+                BOOKING
+            </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-surface">
+<div class="absolute inset-0 water-overlay z-10"></div>
+<div class="px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-12 gap-gutter relative z-20">
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+<span class="text-label-caps font-label-caps text-gold mb-8 block tracking-[0.4em]">VOLUME I • LONDON</span>
+<h1 class="text-[80px] md:text-headline-display font-headline-display mb-8 leading-[0.85] text-primary relative">
+<span class="block">Advanced</span>
+<span class="block italic font-light ml-12 lg:ml-24">Aesthetics,</span>
+<span class="block text-right lg:text-left">Expertly Delivered.</span>
+</h1>
+<div class="max-w-md lg:ml-24 mt-4">
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12 leading-relaxed">
+                        A synthesis of clinical excellence and editorial beauty. Where medical precision meets the art of transformation.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-8">
+<button class="group flex items-center text-label-caps font-label-caps text-primary tracking-[0.2em]">
+<span class="mr-4 border-b border-primary pb-1 group-hover:text-gold group-hover:border-gold transition-all">RESERVE STUDIO</span>
+<span class="material-symbols-outlined text-gold">north_east</span>
+</button>
+<button class="group flex items-center text-label-caps font-label-caps text-primary tracking-[0.2em]">
+<span class="mr-4 border-b border-primary pb-1 group-hover:text-gold group-hover:border-gold transition-all">CONSULTATION</span>
+<span class="material-symbols-outlined text-gold">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative order-1 lg:order-2 mb-12 lg:mb-0">
+<div class="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[80vh] overflow-hidden editorial-image-shadow rounded-sm floating">
+<img alt="Favick Clinic Interior" class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" src="https://lh3.googleusercontent.com/aida/AP1WRLuOVRAkISXVYuncJOCzFG8-A1GAVQDkRsjIa5y6JvWDcG1QhGYhMMLbX7wW-dg_VeDCgJvbE5ZPVlz3xaCg48xKZSA_6pKF2nZkbu4fS-QOdz6T3kGVq7p1Lmsu1KlLHkNMezXKTQBl6E2xlsWU73dGF1aq4ih23A0Cgaenj37Dk_kVja-6fD5OSeB9vGGnuYERaB3Ts5KDivBohn71DdfHGFE_8YCLgrtMwqWxskixj-xhK7_Q9wGRrMY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Floral Accent Decoration -->
+<div class="absolute -bottom-12 -left-12 w-48 h-48 opacity-20 pointer-events-none">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.4,87.1,-15.7,85.1,-0.8C83.2,14.1,75.8,28.2,66.8,40.9C57.7,53.5,47,64.7,34.2,71.2C21.4,77.7,6.4,79.5,-9.5,78.2C-25.5,76.9,-42.5,72.4,-56.1,63.1C-69.6,53.8,-79.8,39.6,-84.3,24.2C-88.8,8.8,-87.7,-7.8,-82.1,-22.9C-76.5,-38.1,-66.4,-51.8,-53.6,-59.4C-40.8,-67,-25.3,-68.6,-11.3,-71.4C2.7,-74.2,16.7,-78.2,31.3,-79.4C46,-80.6,61.3,-79,44.7,-76.4Z" fill="#D4AF37" transform="translate(100 100)"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-stack-xl px-margin-desktop bg-surface-container-low relative overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-gutter">
+<div class="md:col-span-5">
+<span class="text-label-caps font-label-caps text-gold tracking-[0.5em] block mb-8">THE PHILOSOPHY</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-12 leading-tight">Refined Beauty, <br/><span class="italic font-light">Radically Personal.</span></h2>
+</div>
+<div class="md:col-span-7 md:pl-24 relative">
+<div class="absolute -left-4 top-0 h-full w-[1px] bg-gold opacity-30"></div>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-[1.8] mb-8">
+                    At Favick, we move beyond the generic. Our medical clinicians approach every face as a unique composition, utilizing the world's most advanced technologies to reveal a version of you that is refreshed, restored, and unmistakably yourself.
+                </p>
+<div class="gold-rule mb-8 opacity-40"></div>
+<p class="text-label-caps font-label-caps text-primary italic tracking-widest">A NEW ERA OF CLINICAL LUXURY</p>
+</div>
+</div>
+</section>
+<!-- Featured Treatments: Vertical Editorial Cards -->
+<section class="py-stack-xl bg-surface">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-outline-variant/10 pb-8">
+<div>
+<span class="text-label-caps font-label-caps text-gold block mb-4 tracking-[0.3em]">THE SERVICES</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Signature Treatments</h2>
+</div>
+<a class="mt-8 md:mt-0 text-label-caps font-label-caps text-primary group flex items-center" href="#">
+                    VIEW ALL <span class="ml-2 w-8 h-[1px] bg-gold group-hover:w-12 transition-all"></span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-gutter">
+<!-- Treatment Card 1 -->
+<div class="group relative pt-12 hover:-translate-y-4 transition-all duration-700">
+<div class="absolute top-0 left-0 text-[80px] font-headline-display opacity-[0.03] select-none">01</div>
+<div class="aspect-[3/4] overflow-hidden rounded-sm border-[0.5px] border-gold/20 p-2">
+<div class="w-full h-full overflow-hidden relative">
+<img alt="Anti-Wrinkle" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxfiGty8NsuT7Oiwa0m3DPelDQgjWmh1QnDazm12loDDo1HIHA2g4bbrwG-GLMWQ_cgL7_wOQINcQUhiUHRaYccRpLhkLyBqwbsJ5QOOVo720LQ5UOVSLnZfd9pbag-J4vfr-5_oUYw9GjbHYRIzjHc7sycrxnyNqd9uBnd7IlB-Iko2xpFAtuheV48RmzvNg7iy92fR_fVhl53DNHPLxLClP6elLT82AzNbsIw7j5YcBQe3dCYDx8"/>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-headline-md font-headline-md text-primary line-accent">Anti-Wrinkle</h3>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Precision artistry to soften expression lines while maintaining natural facial movement.</p>
+<button class="text-label-caps font-label-caps text-gold pt-4 block tracking-widest hover:opacity-70 transition-opacity">DISCOVER —</button>
+</div>
+</div>
+<!-- Treatment Card 2 -->
+<div class="group relative pt-12 translate-y-12 hover:translate-y-8 transition-all duration-700">
+<div class="absolute top-0 left-0 text-[80px] font-headline-display opacity-[0.03] select-none">02</div>
+<div class="aspect-[3/4] overflow-hidden rounded-sm border-[0.5px] border-gold/20 p-2">
+<div class="w-full h-full overflow-hidden relative">
+<img alt="Dermal Fillers" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4rnAAOjrvrHS3EmK3moUFRaEdZMsOdmddaV6wI4R9esXmmAQhMbtDq0RE58ynoWelzp6V6v3TbmBIdVATYJ3MfbWxgbU0Akbford9o6AAKMl9S_sTPCUEk_2M6-GyAZOh0fkJdMAi5NcUDhtPn7Vhp0jXNj4ngwgALttUD5b-jsSGUSzxt05HnERGxh5UEcgFvKoOwGeMfALvM_e2zLZNzQSgXx_3mykeMqIjevZGNHi5-QVHbZpl"/>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-headline-md font-headline-md text-primary line-accent">Dermal Fillers</h3>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Architectural contouring using hyaluronic acid to restore volume and define structure.</p>
+<button class="text-label-caps font-label-caps text-gold pt-4 block tracking-widest hover:opacity-70 transition-opacity">DISCOVER —</button>
+</div>
+</div>
+<!-- Treatment Card 3 -->
+<div class="group relative pt-12 hover:-translate-y-4 transition-all duration-700">
+<div class="absolute top-0 left-0 text-[80px] font-headline-display opacity-[0.03] select-none">03</div>
+<div class="aspect-[3/4] overflow-hidden rounded-sm border-[0.5px] border-gold/20 p-2">
+<div class="w-full h-full overflow-hidden relative">
+<img alt="Skin Rejuvenation" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADBjhyqWhm7qYu6kzRwPb6GgyihnUfDL99my-KA5o3rZmrXxApsY6xB7gpkuqMBeBtHF77GWcOUE3hNcM4XbGH0-noekv6cXiPL8-s50YaTZd61n3UWCbd-IiWu2n-rLmsFHbHW0GIAa1bIbsw0ks4nZMg4UpBfGuWchbFJjJPrTUiU5040-OrXgteBNUQuW5Pb3wtbtfEHGuYMET5_5gfHD6hkAc9auHTRwokGVmcgVMwWapBWnVE"/>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-headline-md font-headline-md text-primary line-accent">Skin Rejuvenation</h3>
+<p class="text-body-md font-body-md text-on-surface-variant line-clamp-2">Clinical-grade therapies designed to illuminate and refine skin texture from within.</p>
+<button class="text-label-caps font-label-caps text-gold pt-4 block tracking-widest hover:opacity-70 transition-opacity">DISCOVER —</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Accreditation & Press -->
+<section class="py-stack-lg bg-surface-container-low relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gold/10"></div>
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="text-center lg:text-left">
+<p class="text-label-caps font-label-caps text-gold mb-12 tracking-[0.3em]">CLINICAL EXCELLENCE</p>
+<div class="flex flex-wrap justify-center lg:justify-start items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="flex items-center space-x-2"><span class="material-symbols-outlined text-3xl">verified_user</span><span class="font-bold text-sm tracking-widest">GMC</span></div>
+<div class="flex items-center space-x-2"><span class="material-symbols-outlined text-3xl">health_and_safety</span><span class="font-bold text-sm tracking-widest">SAVE FACE</span></div>
+<div class="flex items-center space-x-2"><span class="material-symbols-outlined text-3xl">medical_services</span><span class="font-bold text-sm tracking-widest">JCCP</span></div>
+<div class="flex items-center space-x-2"><span class="material-symbols-outlined text-3xl">clinical_notes</span><span class="font-bold text-sm tracking-widest">CQC</span></div>
+</div>
+</div>
+<div class="text-center lg:text-right border-t lg:border-t-0 lg:border-l border-outline-variant/10 pt-16 lg:pt-0 lg:pl-16">
+<p class="text-label-caps font-label-caps text-gold mb-12 tracking-[0.3em]">AS FEATURED IN</p>
+<div class="flex flex-wrap justify-center lg:justify-end gap-12 font-headline-md text-3xl text-primary/40 italic">
+<span class="hover:text-primary transition-colors cursor-default">Vogue</span>
+<span class="hover:text-primary transition-colors cursor-default">Tatler</span>
+<span class="hover:text-primary transition-colors cursor-default">Bazaar</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-xl px-margin-desktop bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto bg-primary relative p-12 lg:p-24 overflow-hidden rounded-sm">
+<div class="water-overlay absolute inset-0 opacity-[0.05]"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 border-[0.5px] border-gold/20 rounded-full"></div>
+<div class="relative z-10 text-center lg:text-left grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<h2 class="text-headline-lg font-headline-lg text-on-primary mb-8 leading-[1.1]">The transformation <br/><span class="italic font-light">begins with you.</span></h2>
+<p class="text-body-lg font-body-lg text-on-primary/60 max-w-xl">Join our private patient list for an exclusive medical consultation at our Harley Street studio.</p>
+</div>
+<div class="lg:col-span-4 flex justify-center lg:justify-end">
+<button class="px-12 py-5 bg-gold text-primary text-button font-button hover:bg-on-primary hover:text-primary transition-all duration-500 shadow-2xl">
+                        START YOUR JOURNEY
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Ribbon -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-high/90 backdrop-blur-md py-4 z-[60] border-t border-gold/20">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center space-x-3 text-primary">
+<span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+<span class="text-label-caps font-label-caps tracking-[0.2em] text-[10px]">LTD. AVAILABILITY — MARCH '24</span>
+</div>
+<a class="text-primary font-bold text-label-caps font-label-caps border-b border-gold pb-0.5 hover:text-gold transition-all" href="#">
+            RESERVE AN APPOINTMENT
+        </a>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full pt-stack-xl pb-32 bg-primary text-on-primary overflow-hidden relative">
+<div class="absolute inset-0 water-overlay opacity-[0.03]"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="space-y-8">
+<div class="text-headline-md font-headline-md italic">Favick</div>
+<p class="text-body-md font-body-md text-on-primary/50 pr-12 leading-loose">
+                Defining the pinnacle of clinical artistry through integrity, safety, and a tireless pursuit of the aesthetic ideal.
+            </p>
+<div class="flex space-x-6 text-gold">
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">alternate_email</span>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-label-caps font-label-caps text-gold/60 tracking-[0.3em]">COLLECTIONS</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Sculpting</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Luminosity</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Restoration</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Clinical Skincare</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-label-caps font-label-caps text-gold/60 tracking-[0.3em]">STUDIO</h4>
+<ul class="space-y-4">
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">London Studio</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">The Team</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Philosophy</a></li>
+<li><a class="text-on-primary/70 hover:text-gold transition-colors text-body-md" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-label-caps font-label-caps text-gold/60 tracking-[0.3em]">CONNECT</h4>
+<div class="space-y-2">
+<p class="text-on-primary/70 text-body-md">Harley Street, London</p>
+<p class="text-on-primary/70 text-body-md">+44 (0) 20 1234 5678</p>
+</div>
+<div class="pt-6">
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-white/20 pb-4 text-label-caps focus:outline-none focus:border-gold transition-colors placeholder:text-white/30" placeholder="JOIN THE CIRCLE" type="email"/>
+<button class="absolute right-0 top-0 text-gold"><span class="material-symbols-outlined">east</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-32 px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/20 uppercase tracking-[0.4em] font-label-caps">
+<p>© 2024 Favick Studio. Established in Excellence.</p>
+<div class="flex space-x-12 mt-6 md:mt-0">
+<a class="hover:text-gold transition-colors" href="#">Privacy</a>
+<a class="hover:text-gold transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<script>
+    const observerOptions = {
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.group, section h2, section p').forEach(el => {
+        el.style.transition = "all 1s cubic-bezier(0.16, 1, 0.3, 1)";
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        observer.observe(el);
+    });
+
+    // Custom Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('py-3', 'bg-surface/90');
+            nav.classList.remove('py-5', 'bg-surface/60');
+        } else {
+            nav.classList.add('py-5', 'bg-surface/60');
+            nav.classList.remove('py-3', 'bg-surface/90');
+        }
+    });
+</script>
+</body></html>
