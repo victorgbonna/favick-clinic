@@ -27,8 +27,8 @@ function HeroSection() {
           <p className="capitalize font-bold">expertly</p>
           <p className="capitalize font-bold">delivered.</p>    
         </div>
-        <div className="ml-20">
-          <p className="mt-6 mb-8 monte text-sm text-stone-700">A synthesis of clinical excellence and editorial beauty. Where medical precision meets the art of transformation.</p>
+        <div className="">
+          <p className="mt-6 mb-8 monte text-sm text-stone-700">A synthesis of clinical excellence and editorial beauty.<br/>Where medical precision meets the art of transformation.</p>
           <div className="flex items-center gap-x-8">
             {links.map(({label,icon, href},ind)=>
               <Link href={href} key={ind} className="flex items-center gap-x-2 hover:underline">
@@ -52,7 +52,7 @@ function HeroImage() {
     <div className="hero-image-container h-full">
       <ImageContainer
         className="h-full w-[400px]"
-        src="/images/hero-favik1.jpg"
+        src="/images/hero-favik2.jpg"
         imgClass="hero-image shadow-lg "
       />
     </div>
