@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ImageContainer from './../ImageContainer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { API_ENDPOINTS, PAGE_ROUTES } from '@/configs';
 import { useRouter } from 'next/navigation'
 
@@ -38,18 +39,27 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
     const [showNav, setShowNav]= useState(false)
     return(
         <div className='pc:hidden bigpc:hidden text-black tablet:hidden phone:block' 
-            style={scrolledPast?{background:"#F4FFF4"}:{background:"transparent", color:'#FFFFFF'}}
+            style={scrolledPast?{background:" #F8F8F6"}:{background:"transparent"}}
         >
-        <div className='flex justify-between items-center px-6 py-3'>
-           <div className="flex justify-between items-center px-5 py-5">
-            <Link href={PAGE_ROUTES.HOME} className='flex flex-col items-center ls0 text-3xl font-bold italic playfair flex items-center gap-x-2'>
-                <p>{API_ENDPOINTS.BRAND_NAME_SHORT}</p>
-                <p className='text-sm ls0'>{API_ENDPOINTS.BRAND_NAME_LONG.split(' ')[1]} {API_ENDPOINTS.BRAND_NAME_LONG.split(' ')[2]}</p>
+        <div className='flex justify-between tablet:block tablet:p-4 items-center px-6 py-0'>
+           <div className="flex justify-between items-center px-5 py-5 tablet:py-4">
+            <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center'>
+                <Image
+                    src="/images/favick-logo.png"
+                    alt="Favick Clinic"
+                    width={60}
+                    height={60}
+                    className="h-auto"
+                    priority
+                />
             </Link>
-            <button onClick={() => setShowNav(!showNav)}>
-                <span className="material-symbols-outlined text-3xl">
-                menu
-                </span>
+            <button onClick={() => setShowNav(!showNav)} aria-label="Toggle navigation menu" className="p-1">
+                <Image
+                    src="/svg/barcode.svg"
+                    alt="Menu"
+                    width={30}
+                    height={30}
+                />
             </button>
             </div>
         </div>
@@ -66,7 +76,7 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
                 </Link>
                 ))}
 
-                <button className="w-full bg-primary text-white py-4 uppercase tracking-[0.15em] text-[13px] hover:bg-gold hover:text-primary transition-all">
+                <button className="w-full bg-[#0d1b34] text-white py-4 uppercase tracking-[0.15em] text-[13px] hover:bg-gold hover:text-primary transition-all">
                 BOOKING
                 </button>
             </div>
@@ -82,10 +92,15 @@ function PcNav({nav_list, scrolledPast, activeNav}){
         className="phone:hidden fixed top-0 left-0 right-0 z-50 w-full bg-surface backdrop-blur-xl  border-outline-variant/5"
         >
         <div className="max-w-[1280px] mx-auto px-[80px] py-5 flex items-center justify-between">
-            <Link href={PAGE_ROUTES.HOME} className='flex flex-col items-center ls0 text-3xl font-bold italic playfair flex items-center gap-x-2'>
-                <p>{API_ENDPOINTS.BRAND_NAME_SHORT}</p>
-                <p className='text-sm ls0'>{API_ENDPOINTS.BRAND_NAME_LONG.split(' ')[1]} {API_ENDPOINTS.BRAND_NAME_LONG.split(' ')[2]}</p>
-
+            <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center'>
+                <Image
+                    src="/images/favick-logo.png"
+                    alt="Favick Clinic"
+                    width={60}
+                    height={60}
+                    className="h-auto"
+                    priority
+                />
             </Link>
 
             <div className="favick-nav flex items-center gap-12">
@@ -99,7 +114,7 @@ function PcNav({nav_list, scrolledPast, activeNav}){
                 </Link>
             ))}
 
-            <button className="bg-primary text-white text-[13px] uppercase tracking-[0.1em] px-8 py-3 monte hover:bg-gold hover:text-primary transition-all duration-500">
+            <button className="bg-[#0d1b34] text-white text-[13px] uppercase tracking-[0.1em] px-8 py-3 monte hover:bg-gold hover:text-primary transition-all duration-500">
                 BOOKING
             </button>
             </div>

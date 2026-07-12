@@ -1,3 +1,9 @@
+export {default as Accolades}  from './helper/accolades';
+export {default as Testimonials} from './helper/testimonials';
+export {default as JourneyCta} from './helper/journeyCta';
+
+export {default as Services} from './helper/services';
+
 export {default as CourseHelper} from './helper/SectionHelper/course';
 export {default as ProjectHelper} from './helper/SectionHelper/project';
 export {default as BlogHelper} from './helper/SectionHelper/blog';
@@ -19,4 +25,5 @@ export {default as iconSvgPath} from './helper/iconSvgPath';
 export { default as LazyBackground } from './helper/LazyBackground';
 
 export { default as ContactForm } from "./helper/ContactForm";
+
 // DataFetch
