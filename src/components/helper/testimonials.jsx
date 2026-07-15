@@ -47,22 +47,25 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function Testimonials({
+  sectionLabel = "Testimonials",
+  heading = "Skin stories, told honestly",
+  description = "Read their full treatment experience, from interest to visible results.",
+  className = "",
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeTestimonial = testimonials[activeIndex];
 
   const goPrevious = () => {
-    return
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
   const goNext = () => {
-    return
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <section className=" py-16 px-10 tablet:px-4">
+    <section className={`py-16 px-10 tablet:px-4 ${className}`}>
       <div className=" rounded-3xl border border-[#d8e2f1] bg-white p-10 tablet:px-4">
         <div className="grid gap-8 gap-x-[4%] grid-cols-[40%_56%] tablet:grid-cols-1">
           <article className="order-2 relative overflow-hidden rounded-2xl bg-[#0D1B34] p-7 text-white md:p-9">
@@ -112,15 +115,15 @@ export default function Testimonials() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-md bg-[#dce5f3] px-4 py-2 monte text-[10px] font-semibold uppercase tracking-[0.24em] text-[#173f89]">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              Testimonials
+              {sectionLabel}
             </p>
 
             <h3 className="mt-5 playfair text-4xl font-bold leading-tight ">
-              Skin stories, told honestly
+              {heading}
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-gray-800">
-                Read their full treatment experience, from interest to visible results.
+                {description}
             </p>
 
             {/* <div className="mt-6 space-y-3">

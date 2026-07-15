@@ -151,7 +151,7 @@ export default function Services() {
                   className="h-[320px] w-full object-cover tablet:w-full 
                   "
                 />
-                {/* phone:w-[calc(100%+12px)] phone:-mx-[6px] */}
+                {/* phone:w-[calc(1lik */}
 
                 <div className="p-5 phone:px-4 phone:py-4">
                       <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Category</p>

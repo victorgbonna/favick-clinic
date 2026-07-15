@@ -54,7 +54,7 @@ const API_ENDPOINTS = {
       {
         id:'facials',
         name:'Facials',
-        image:'/images/treatments/facials.png',
+        image:'/images/treatments/facial-new.png',
         intro:'Grouped by skin concern, so you can choose based on what your skin needs rather than guessing between similar-sounding options.',
         treatments:[
           {
@@ -125,7 +125,7 @@ const API_ENDPOINTS = {
       {
         id:'six-in-one-facial',
         name:'6-in-1 Facial',
-        image:'/images/treatments/anti-wrinkle.jpg',
+        image:'/images/treatments/6in1facial-new.png',
         intro:'A technology-led category combining multiple advanced modalities for visible skin improvement in one pathway.',
         treatments:[
           {
@@ -154,7 +154,7 @@ const API_ENDPOINTS = {
       {
         id:'chemical-peels',
         name:'Chemical Peels',
-        image:'/images/treatments/chemical-peel.jpg',
+        image:'/images/treatments/chemical-peel-new.png',
         intro:'Bespoke peels tailored to your skin, with melanin-rich skin safety front of mind.',
         treatments:[
           {
@@ -176,7 +176,7 @@ const API_ENDPOINTS = {
       {
         id:'microneedling',
         name:'Microneedling',
-        image:'/images/treatments/dermal-fillers.jpg',
+        image:'/images/treatments/microneedling-new.png',
         intro:'A collagen-induction treatment for the face and neck.',
         treatments:[
           {
@@ -198,7 +198,7 @@ const API_ENDPOINTS = {
       {
         id:'mesotherapy',
         name:'Mesotherapy',
-        image:'/images/treatments/skin-rejuvenation.jpg',
+        image:'/images/treatments/mesotherapy-new.png',
         intro:'Targeted active ingredient delivery for hydration, brightening and rejuvenation.',
         treatments:[
           {

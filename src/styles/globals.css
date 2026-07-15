@@ -439,5 +439,43 @@ stroke: #d4af37;
     opacity: .35;
 }
 
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+}
 
+.animate-in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.65, 0.2, 1);
+}
 
+.hero-image-container {
+  position: relative;
+  padding: 3px;
+  border-radius: 8px; /* matches rounded-md */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-image-container::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+  #0b0f19 75%,   
+  #64748b 85%,
+  #f1f5f9 92%,
+  #64748b 95%,
+  #0b0f19 100%
+  );
+  animation: spin 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

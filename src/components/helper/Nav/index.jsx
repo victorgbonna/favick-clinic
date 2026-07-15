@@ -10,19 +10,19 @@ export default function Nav({scrolledPast,scrolledPastMobile, activeNav}) {
     const nav_list = [
   {
     label: "About Us",
-    to: "#heritage",
+        to: PAGE_ROUTES.ABOUT,
   },
   {
     label: "Treatments",
-    to: "#studio",
+        to: "/#studio",
   },
   {
     label: "Gallery",
-    to: "#studio",
+        to: "/#studio",
   },
   {
     label: "Contact",
-    to: "#contact",
+        to: "/#contact",
   },
 ];
     const router = useRouter()

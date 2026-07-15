@@ -42,9 +42,9 @@ export default function Footer() {
 
             <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <img src="/images/favick-logo.png" alt="Favick Skin Clinic" width={50} height={50}/>
+                    <img src="/images/favick-logo-footer.png" alt="Favick Skin Clinic" width={50} height={50}/>
                     {/* <h3 className="playfair text-4xl italic text-white">{API_ENDPOINTS.BRAND_NAME_LONG}</h3> */}
-                    <p className="mt-5 max-w-xs text-sm leading-7 text-[#88a4d6]">
+                    <p className="mt-5 max-w-xs text-sm leading-7 text-[#c4d3f0]">
                         Personalised skin treatments for melanin-rich and all skin types, delivered with clinical precision, honest guidance, and care that prioritises long-term skin health.
                     </p>
 
@@ -102,13 +102,12 @@ export default function Footer() {
                             ))}
                         </div>
                         <p className="pt-2"><Link href="mailto:hello@favickskinclinic.co.uk" className="hover:text-white">hello@favickskinclinic.co.uk</Link></p>
-                        <p><Link href="mailto:faith@favickskinclinic.co.uk" className="hover:text-white">faith@favickskinclinic.co.uk</Link></p>
                         <p>+44 795 661 3490</p>
                         <p>{'Opening hours: Monday-Friday, 9:30am-5:00pm (By appointments only)'}</p>
                     </div>
 
                     <Link href="#contact" className="mt-6 inline-flex w-full items-center justify-between border border-[#193768] bg-transparent px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9eb7e2] transition hover:border-[#315791] hover:text-white">
-                        Join The Circle
+                        Join the Favick Community
                         <span className="text-[#d4af37]">&#8594;</span>
                     </Link>
                 </div>
@@ -121,6 +120,6 @@ export default function Footer() {
                     {/* <Link href="#" className="hover:text-[#a9c0e8]">Terms</Link> */}
                 </div>
             </div>
-        </footer>
+                    </footer>
     );
 }
