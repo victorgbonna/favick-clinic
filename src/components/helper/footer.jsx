@@ -114,7 +114,7 @@ export default function Footer() {
             </div>
 
             <div className="mx-auto mt-14 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-[#122d5c] pt-5 text-[11px] uppercase tracking-[0.22em] text-[#5978ad] md:flex-row md:items-center">
-                <p>&copy; {year} {API_ENDPOINTS.BRAND_NAME_LONG}. Established in Excellence.</p>
+                <p>&copy; {year} {API_ENDPOINTS.BRAND_NAME_LONG}. Expert Skincare for Every Skin Tone.</p>
                 <div className="flex items-center gap-6">
                     <Link href="#refund-return-policy" className="hover:text-[#a9c0e8]">Refund & Return Policy</Link>
                     {/* <Link href="#" className="hover:text-[#a9c0e8]">Terms</Link> */}
