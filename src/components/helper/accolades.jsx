@@ -7,7 +7,7 @@ export default function Accolades() {
         { label: "Level 2 Award in Awareness of Skin of Colour Qualification", icon: "/svg/awards/skin.svg" },
     ];
 
-    // const educationItems = [
+    // const educationItems = [ww
     //     { label: "Robert Gordon University (First Class Honours)", icon: "/svg/awards/first.svg" },
     // ];
 
