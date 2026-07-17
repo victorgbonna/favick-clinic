@@ -2,7 +2,7 @@ const PAGE_ROUTES = {
   HOME: "/",
   ABOUT: "/about-us",
   SERVICES: "/about-us",
-  PROJECTS: "/projects",
+  TREATMENTS: "/treatments",
   COURSES: "/courses",
   BLOGS: "/blogs",
   CONTACT: "/contact-us",

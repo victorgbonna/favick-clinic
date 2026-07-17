@@ -1,185 +1,82 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Accolades, Testimonials } from "@/components";
+import {
+  Accolades,
+  AfterHeroSection,
+  HeroSection,
+  StoryNarrative,
+  Testimonials,
+} from "@/components";
 import { PAGE_ROUTES } from "@/configs";
 
 const missionValues = [
   {
-    title: "Clinical Integrity",
+    title: "Putting Your Skin First",
     description:
-      "Every plan begins with proper assessment, skin history and long-term barrier health. We do not chase quick fixes.",
+      "Every treatment starts with listening to your concerns and understanding your skin before recommending anything.",
   },
   {
-    title: "Melanin Expertise",
+    title: "Expert Care for Melanin-Rich Skin",
     description:
-      "Protocols are tailored for melanin-rich skin with care around pigmentation triggers, downtime and safe progression.",
+      "Every skin is different, so I take the time to choose treatments that are safe, effective and suitable for you.",
   },
   {
-    title: "Honest Guidance",
+    title: "Honest Advice, Always",
     description:
-      "Clients receive clear expectations, realistic timelines and support that protects both confidence and outcomes.",
+      "I'll always be honest about what your skin needs, how long results may take and what to expect along the way.",
   },
 ];
 
-const socialLinks = [
-  { icon: "/svg/socials/insta.svg", href: "https://instagram.com/favickskinclinic", label: "Instagram" },
-  { icon: "/svg/socials/facebook.svg", href: "https://facebook.com/favickskinclinic", label: "Facebook" },
-  { icon: "/svg/socials/tiktok.svg", href: "https://tiktok.com/@favickskinclinic", label: "TikTok" },
-];
+// function StoryNarrative() {
+//   return (
+//     <section className="mx-auto grid max-w-[1280px] grid-cols-12 items-start gap-8 px-[80px] py-24 tablet:grid-cols-1 tablet:px-5 tablet:py-14">
+//       <aside className="col-span-5 tablet:col-span-1 lg:sticky lg:top-[130px]">
+//         <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">The Journey of Faith Aminaho</p>
+//         <h2 className="mt-4 playfair text-5xl font-bold leading-[1.08] text-[#0d1b34] tablet:text-4xl">
+//           From Personal
+//           <br />
+//           <span className="font-medium italic">Challenge to Purpose</span>
+//         </h2>
 
-function EditorialHero() {
-  return (
-    <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-transparent px-[80px] pt-28 pb-20 tablet:px-5 tablet:pt-24 tablet:pb-14">
-      {/* <div className="absolute inset-0">
-        <Image
-          src="/images/hero-favik2.jpg"
-          alt="Favick Skin Clinic interior style hero"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b34]/75 via-[#0d1b34]/40 to-[#0d1b34]/10" />
-      </div> */}
+//         <blockquote className="mt-10 border-l border-gold/50 pl-7 playfair text-2xl italic leading-snug text-[#775a19] tablet:mt-7 tablet:text-xl">
+//           {"'I wanted to create the kind of clinic I needed when I was trying to understand my own skin.'"}
+//         </blockquote>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1280px] justify-center">
-        <div className="max-w-3xl border border-white/20 bg-[#f8f8f6]/78 p-10 text-center backdrop-blur-sm md:p-14 tablet:p-6">
-          <p className="monte text-[10px] font-semibold uppercase tracking-[0.3em] text-gold">
-            Favick Skin Clinic
-          </p>
+//         <p className="mt-8 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">
+//           {"Faith's experience with hormonal changes, postpartum pigmentation and persistent breakouts reshaped her relationship with skin. Instead of accepting confusion, she studied advanced aesthetics to give clients what she once searched for: confidence built on expertise."}
+//         </p>
+//       </aside>
 
-          <h1 className="mt-5 playfair text-6xl font-bold leading-[1.03] text-[#0d1b34] tablet:text-4xl">
-            Our Story
-            <br />
-            <span className="font-medium italic">
-              Rooted in Experience
-            </span>
-          </h1>
+//       <div className="col-span-7 space-y-12 tablet:col-span-1">
+//         <article className="relative overflow-hidden rounded-2xl border border-[#e8e4da] shadow-[0_30px_90px_-40px_rgba(13,27,52,0.35)]">
+//           <div className="group relative overflow-hidden rounded-xl">
+//             <Image
+//               src="/images/models.png"
+//               alt="Model's image"
+//               width={1200}
+//               height={1400}
+//               className="h-[560px] shadow-lg w-full object-cover object-top transition duration-700 group-hover:scale-[1.03] tablet:h-[400px]"
+//             />
+//             <div className="absolute bottom-4 left-4 max-w-xs border border-white/20 bg-[#0d1b34]/85 p-5 text-white backdrop-blur-sm">
+//               <p className="monte text-[10px] uppercase tracking-[0.2em] text-gold">The Beginning</p>
+//               <p className="mt-2 text-[13px] leading-6 text-white/90">A personal need for better answers became the foundation of a clinic built on trust.</p>
+//             </div>
+//           </div>
+//         </article>
 
-          <div className="mx-auto mt-7 h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" />
-
-          <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-[#0d1b34]/90 tablet:text-[13px] tablet:leading-6">
-            Favick was built from a personal skin journey through acne, melasma and
-            hyperpigmentation. What started as a search for clarity became a clinic
-            where women receive structured and clinically responsible
-            care.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StoryNarrative() {
-  return (
-    <section className="mx-auto grid max-w-[1280px] grid-cols-12 items-start gap-8 px-[80px] py-24 tablet:grid-cols-1 tablet:px-5 tablet:py-14">
-      <aside className="col-span-5 tablet:col-span-1 lg:sticky lg:top-[130px]">
-        <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">The Journey of Faith Aminaho</p>
-        <h2 className="mt-4 playfair text-5xl font-bold leading-[1.08] text-[#0d1b34] tablet:text-4xl">
-          From Personal
-          <br />
-          <span className="font-medium italic">Challenge to Purpose</span>
-        </h2>
-
-        <blockquote className="mt-10 border-l border-gold/50 pl-7 playfair text-2xl italic leading-snug text-[#775a19] tablet:mt-7 tablet:text-xl">
-          {"'I wanted to create the kind of clinic I needed when I was trying to understand my own skin.'"}
-        </blockquote>
-
-        <p className="mt-8 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">
-          {"Faith's experience with hormonal changes, postpartum pigmentation and persistent breakouts reshaped her relationship with skin. Instead of accepting confusion, she studied advanced aesthetics to give clients what she once searched for: confidence built on expertise."}
-        </p>
-      </aside>
-
-      <div className="col-span-7 space-y-12 tablet:col-span-1">
-        <article className="relative overflow-hidden rounded-2xl border border-[#e8e4da] shadow-[0_30px_90px_-40px_rgba(13,27,52,0.35)]">
-          <div className="group relative overflow-hidden rounded-xl">
-            <Image
-              src="/images/models.png"
-              alt="Model's image"
-              width={1200}
-              height={1400}
-              className="h-[560px] shadow-lg w-full object-cover object-top transition duration-700 group-hover:scale-[1.03] tablet:h-[400px]"
-            />
-            <div className="absolute bottom-4 left-4 max-w-xs border border-white/20 bg-[#0d1b34]/85 p-5 text-white backdrop-blur-sm">
-              <p className="monte text-[10px] uppercase tracking-[0.2em] text-gold">The Beginning</p>
-              <p className="mt-2 text-[13px] leading-6 text-white/90">A personal need for better answers became the foundation of a clinic built on trust.</p>
-            </div>
-          </div>
-        </article>
-
-        <div className="grid gap-6 tablet:gap-4 md:grid-cols-3">
-          {missionValues.map((item) => (
-            <article key={item.title} className="rounded-xl border border-[#e8e4da] bg-[#fbf9f5] p-5">
-              <h3 className="playfair text-2xl font-semibold text-[#0d1b34]">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function MeetFaith() {
-  return (
-    <section className="bg-surface-container-low py-24 tablet:py-14">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-12 items-center gap-8 px-[80px] tablet:grid-cols-1 tablet:px-5">
-        <div className="relative col-span-6 tablet:col-span-6 overflow-hidden rounded-2xl border border-[#d7d2c7]">
-          <div className="group relative overflow-hidden rounded-xl">
-            <Image
-              src="/images/faithaminaho.jpg"
-              alt="Portrait placeholder for Faith Aminaho"
-              width={1000}
-              height={1200}
-              className="h-[640px] w-full object-cover object-top transition duration-700 group-hover:scale-[1.02] tablet:h-[420px]"
-            />
-          </div>
-          <div className="absolute right-6 top-6 hidden border border-[#d8cfbf] bg-[#f8f5ef] p-5 md:block">
-            <p className="monte text-[10px] uppercase tracking-[0.2em] text-gold">Credentials</p>
-            <ul className="mt-2 space-y-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#0d1b34]">
-              <li>NHS Practice</li>
-              <li>Advanced Aesthetics</li>
-              <li>Pigmentation Focus</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="col-span-5 col-start-8 tablet:col-start-1 w-full tablet:col-span-6">
-          <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Meet Our Founder</p>
-          <h2 className="mt-4 playfair text-6xl font-bold leading-[1.04] text-[#0d1b34] tablet:text-4xl">
-            Faith Aminaho
-          </h2>
-          <div className="mt-6 tablet:mt-0 h-px w-24 tablet:w-fit bg-gradient-to-r from-transparent via-[#775a19] to-transparent" />
-          <p className="mt-7 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">
-            With an NHS background and specialist aesthetics training, Faith combines clinical discipline with gentle, person-centered care. Her philosophy prioritizes skin function, thoughtful treatment pacing and outcomes that look natural in real life.
-          </p>
-          <p className="mt-5 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">
-            She is especially trusted by clients with melanin-rich skin who want a professional, safe and elevated treatment experience.
-          </p>
-
-          <div className="mt-6">
-            <p className="monte text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">Connect With Faith</p>
-            <div className="mt-3 flex items-center gap-3">
-              {socialLinks.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.label}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-[#d6cfbf] bg-white transition hover:-translate-y-0.5 hover:border-gold"
-                >
-                  <img src={item.icon} alt={item.label} className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </section>
-  );
-}
+//         <div className="grid gap-6 tablet:gap-4 md:grid-cols-3">
+//           {missionValues.map((item) => (
+//             <article key={item.title} className="rounded-xl border border-[#e8e4da] bg-[#fbf9f5] p-5">
+//               <h3 className="playfair text-2xl font-semibold text-[#0d1b34]">{item.title}</h3>
+//               <p className="mt-3 text-sm leading-7 text-on-surface-variant tablet:text-[13px] tablet:leading-6">{item.description}</p>
+//             </article>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function LifestyleGallery() {
   return (
@@ -274,26 +171,28 @@ function SectionCta({
 export default function AboutUPage() {
   return (
     <div className="bg-surface">
-      <EditorialHero />
-      <MeetFaith />
+      {/* <EditorialHero />
+      <MeetFaith /> */}
+      <HeroSection/>
+      <AfterHeroSection/>
       <Accolades />
-      <StoryNarrative />
+      {/* <StoryNarrative /> */}
       <SectionCta
-        title="Explore Treatments Curated for Your Skin"
-        copy="Discover treatment pathways designed for real skin outcomes, not one-size-fits-all routines."
+        title="Find the Right Treatment for You"
+        copy="Discover thoughtful treatment options tailored to your skin, your concerns and your goals."
         actionLabel="View Our Treatments"
         href="/#studio"
       />
 
       <Testimonials
         sectionLabel="Kind Words From Our Clients"
-        heading="What Our Clients Say"
+        heading="Real Stories. Real Confidence."
         description="Real stories from clients who chose a thoughtful, tailored approach and saw meaningful progress in their skin confidence."
       />
       <SectionCta
         dark
-        title="Ready for Your Consultation?"
-        copy="Book your session and get a treatment plan tailored to your skin goals, concerns and timeline."
+        title="Let's Talk About Your Skin"
+        copy="I'd love to meet you and create a treatment plan that feels right for your skin, goals and timeline."
         actionLabel="Book a Consultation"
         href={PAGE_ROUTES.CONTACT}
       />

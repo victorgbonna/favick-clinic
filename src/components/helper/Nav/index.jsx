@@ -14,15 +14,15 @@ export default function Nav({scrolledPast,scrolledPastMobile, activeNav}) {
   },
   {
     label: "Treatments",
-        to: "/#studio",
+        to: PAGE_ROUTES.TREATMENTS,
   },
-  {
-    label: "Gallery",
-        to: "/#studio",
-  },
+//   {
+//     label: "Gallery",
+//         to: "/#studio",
+//   },
   {
     label: "Contact",
-        to: "/#contact",
+        to: PAGE_ROUTES.CONTACT,
   },
 ];
     const router = useRouter()
@@ -115,7 +115,7 @@ function PcNav({nav_list, scrolledPast, activeNav}){
             ))}
 
             <button className="bg-[#0d1b34] text-white text-[13px] uppercase tracking-[0.1em] px-8 py-3 monte hover:bg-gold hover:text-primary transition-all duration-500">
-                BOOKING
+                BOOK US
             </button>
             </div>
         </div>

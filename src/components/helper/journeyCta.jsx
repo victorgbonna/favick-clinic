@@ -35,7 +35,7 @@ export default function JourneyCta() {
                 <span className="font-medium italic">begins with you.</span>
                 </h3>
                 <p className="mt-5 max-w-lg text-sm leading-7 text-white/80 tablet:mx-auto tablet:max-w-md tablet:text-center tablet:text-[13px] tablet:leading-6">
-                Join our private client list for a tailored skincare consultation and a treatment pathway built around your exact skin goals.
+                    {"Every great skin journey starts with understanding your skin. Book a personalised consultation and let us create a treatment plan that's right for you."}
                 </p>
           </div>
 
