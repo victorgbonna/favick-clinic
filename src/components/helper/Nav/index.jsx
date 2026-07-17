@@ -42,7 +42,7 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
             style={scrolledPast?{background:" #F8F8F6"}:{background:"transparent"}}
         >
         <div className='flex justify-between tablet:block tablet:p-4 items-center px-6 py-0'>
-           <div className="flex justify-between items-center px-5 py-5 tablet:py-4">
+           <div className="flex justify-between items-center">
             <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center'>
                 <Image
                     src="/images/favick-logo.png"

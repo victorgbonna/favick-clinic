@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import { API_ENDPOINTS } from "@/configs";
+import Link from "next/link";
 
 function extractPriceValues(priceText) {
   const matches = String(priceText).match(/\d+(?:\.\d+)?/g);
@@ -72,14 +73,14 @@ export default function TreatmentsPage() {
       </header>
 
       <nav className="sticky top-[88px] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 py-4">
-        <div className="max-w-7xl mx-auto flex justify-center gap-8 px-6 tablet:px-4">
-          <a href="#treatments" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold">Treatments</a>
-          <a href="#consultations" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold">Consultations</a>
-          <a href="#virtual-services" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold">Virtual Services</a>
+        <div className="max-w-7xl mx-auto flex overflow-x-auto pb-3 flex-nowrap tablet:justify-start justify-start gap-8 px-6 tablet:pl-4 tablet:px-2 tablet:gap-x-20">
+          <Link href="#treatments" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto tablet:text-sm text-center tablet:text-left">Treatments</Link>
+          <Link href="#consultations" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Consultations</Link>
+          <Link href="#virtual-services" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Virtual Services</Link>
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 py-16 tablet:px-4">
+      <main className="max-w-7xl mx-auto px-6 py-16 tablet:py-8 tablet:px-4">
         <section id="treatments" className="scroll-mt-32">
           <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Treatments</p>
           <h2 className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">Choose a Category</h2>

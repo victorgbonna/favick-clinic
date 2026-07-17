@@ -117,7 +117,7 @@ export default function Footer() {
             <div className="mx-auto mt-14 flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-[#122d5c] pt-5 text-[11px] uppercase tracking-[0.22em] text-[#5978ad] md:flex-row md:items-end">
                 <div className="space-y-1">
                     <p className='text-[13px]'>&copy; {year} {API_ENDPOINTS.BRAND_NAME_LONG}.</p>
-                    <p className="text-[12px] normal-case tracking-[0.12em] text-[#6f8bbe]">{'Expert Skincare for Every Skin Tone'}</p>
+                    <p className="text-[12px] normal-case tracking-[0.12em] italic">{'Expert Skincare for Every Skin Tone'}</p>
                 </div>
                 <div className="flex items-center gap-6">
                     <Link href="#refund-return-policy" className="hover:text-[#a9c0e8]">Refund & Return Policy</Link>

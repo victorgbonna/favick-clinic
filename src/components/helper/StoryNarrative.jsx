@@ -34,7 +34,7 @@ export default function StoryNarrative() {
     //     truly put you first.
     // </p>;
   return (
-    <section className="mx-auto grid max-w-[1280px] grid-cols-12 items-center gap-8 px-[80px] py-24 tablet:grid-cols-1 tablet:px-5 tablet:mt-14 mt-10">
+    <section className="mx-auto grid max-w-[1280px] grid-cols-12 items-center gap-8 px-[80px] py-24 tablet:grid-cols-1 tablet:px-5 tablet:mt-2 mt-10">
       <aside className="col-span-5 tablet:col-span-1">
         <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
           Welcome to Favick Skin Clinic
@@ -57,9 +57,9 @@ export default function StoryNarrative() {
         {/* {newLocal} */}
       </aside>
 
-      <div className="col-span-7 space-y-12 tablet:col-span-1 justify-self-end">
+      <div className="col-span-7 space-y-12 tablet:col-span-1 justify-self-end tablet:justify-self-center">
         <article className="relative  w-fit rounded-2xl border border-[#e8e4da] shadow-[0_30px_90px_-40px_rgba(13,27,52,0.35)]">
-          <div className="group relative overflow-hidden rounded-xl w-[500px] tablet:w-[350px]">
+          <div className="group relative overflow-hidden rounded-xl w-[450px] tablet:w-[350px]">
             <ImageContainer
               src="/images/models.png"
               alt="Favick Skin Clinic"

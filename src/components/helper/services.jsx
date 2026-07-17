@@ -96,7 +96,7 @@ export default function Services() {
   const initialSlide = coreCategories.findIndex((item) => item.id === selectedCategoryId);
 
   return (
-    <section id="studio" className="bg-surface-container-low px-6 py-20 px-24 tablet:px-0 tablet:py-14">
+    <section id="studio" className="bg-surface-container-low py-20 px-24 tablet:px-4 tablet:py-14">
       <div className="mx-auto max-w-7xl tablet:max-w-full">
         <div className="mb-10 text-center">
           <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">{API_ENDPOINTS.BRAND_NAME_LONG}</p>
