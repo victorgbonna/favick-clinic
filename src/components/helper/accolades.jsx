@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Accolades() {
     const clinicalItems = [
         { label: "Scottish Beauty Expert Training Academy", icon: "/svg/awards/shield.svg" },
-        { label: "Diploma: Chemical Peel, Microneedling, Mesotherapy", icon: "/svg/awards/diploma.svg" },
+        { label: "Diploma: Professional Facials, Chemical Peel, Microneedling, Mesotherapy", icon: "/svg/awards/diploma.svg" },
         { label: "Level 2 Award in Awareness of Skin of Colour Qualification", icon: "/svg/awards/skin.svg" },
     ];
 

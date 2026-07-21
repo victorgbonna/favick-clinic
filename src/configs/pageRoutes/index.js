@@ -6,12 +6,18 @@ const PAGE_ROUTES = {
   COURSES: "/courses",
   BLOGS: "/blogs",
   CONTACT: "/contact-us",
+  BOOKING_LINK: "https://wa.me/447956613490",
   A_BLOG:(id)=>{
     return '/blogs/hse/'+id
   },
+  SOCIAL_LINKS: {
+    INSTAGRAM: "https://instagram.com/favickskinclinic",
+    LINKEDIN: "https://www.linkedin.com/in/faith-ebenezer/",
+    YOUTUBE: "https://www.youtube.com/@LifeWithFaithAminaho",
+  },
   CONTACT_LINK:{
-    WHATSAPP_LINK:"https://wa.me/971592295379",
-    PHONE:'+971592295379'
+    WHATSAPP_LINK:"https://wa.me/447956613490",
+    PHONE:'+44 795 661 3490'
   },
   
 };

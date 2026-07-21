@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/router";
 
 import { API_ENDPOINTS } from "@/configs";
 import Link from "next/link";
@@ -48,6 +49,7 @@ function CategorySection({ id, label, title, intro, treatments }) {
 }
 
 export default function TreatmentsPage() {
+  const router = useRouter();
   const servicesData = API_ENDPOINTS.SERVICES;
   const coreCategories = servicesData.CORE_CATEGORIES || [];
   const consultationCategories = servicesData.CONSULTATION_CATEGORIES || [];
@@ -56,6 +58,16 @@ export default function TreatmentsPage() {
   const comingSoon = servicesData.COMING_SOON;
 
   const [selectedCategoryId, setSelectedCategoryId] = useState(coreCategories[0]?.id || "");
+
+  useEffect(() => {
+    if (!router.isReady || !coreCategories.length) return;
+
+    const queryValue = router.query.t;
+    const selectedQuery = Array.isArray(queryValue) ? queryValue[0] : queryValue;
+    const matchingCategory = coreCategories.find((category) => category.id === selectedQuery);
+
+    setSelectedCategoryId(matchingCategory?.id || coreCategories[0]?.id || "");
+  }, [coreCategories, router.isReady, router.query.t]);
 
   const selectedCategory = useMemo(
     () => coreCategories.find((item) => item.id === selectedCategoryId) || coreCategories[0],
@@ -73,10 +85,10 @@ export default function TreatmentsPage() {
       </header>
 
       <nav className="sticky top-[88px] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 py-4">
-        <div className="max-w-7xl mx-auto flex overflow-x-auto pb-3 flex-nowrap tablet:justify-start justify-start gap-8 px-6 tablet:pl-4 tablet:px-2 tablet:gap-x-20">
-          <Link href="#treatments" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto tablet:text-sm text-center tablet:text-left">Treatments</Link>
-          <Link href="#consultations" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Consultations</Link>
-          <Link href="#virtual-services" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-full tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Virtual Services</Link>
+        <div className="max-w-7xl mx-auto flex overflow-x-auto pb-3 tablet:flex-nowrap tablet:justify-start justify-start gap-8 px-6 tablet:pl-4 tablet:px-2 tablet:gap-x-20">
+          <Link href="#treatments" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-fit tablet:w-auto tablet:text-sm text-center tablet:text-left">Treatments</Link>
+          <Link href="#consultations" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-fit tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Consultations</Link>
+          <Link href="#virtual-services" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-fit  tablet:w-auto text-center tablet:text-left tablet:w-auto tablet:text-sm">Virtual Services</Link>
         </div>
       </nav>
 
@@ -148,6 +160,34 @@ export default function TreatmentsPage() {
             treatments={comingSoon.treatments}
           />
         ) : null}
+
+        <section className="mt-14 rounded-3xl border border-[#0d2246] bg-[#0D1B34] px-6 py-10 text-white md:px-10">
+          <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Ready to Start?</p>
+          <h2 className="mt-3 playfair text-4xl font-bold tablet:text-3xl">Book the Right Treatment for Your Skin</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/85">
+            Not sure where to begin? Start with a consultation or send a quick WhatsApp message and we will guide you
+            to the most suitable next step.
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-4">
+            <Link
+              href={API_ENDPOINTS.CONTACT.WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"
+            >
+              Book Now
+            </Link>
+            <Link
+              href={API_ENDPOINTS.CONTACT.WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center border border-white/30 bg-white/10 px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white/20"
+            >
+              Chat on WhatsApp
+            </Link>
+          </div>
+        </section>
       </main>
     </div>
   );

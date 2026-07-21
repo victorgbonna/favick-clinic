@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Accolades, Testimonials } from "@/components";
-import { PAGE_ROUTES } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 
 const missionValues = [
   {
@@ -23,9 +23,9 @@ const missionValues = [
 ];
 
 const socialLinks = [
-  { icon: "/svg/socials/insta.svg", href: "https://instagram.com/favickskinclinic", label: "Instagram" },
-  { icon: "/svg/socials/facebook.svg", href: "https://facebook.com/favickskinclinic", label: "Facebook" },
-  { icon: "/svg/socials/tiktok.svg", href: "https://tiktok.com/@favickskinclinic", label: "TikTok" },
+  { icon: "/svg/socials/insta.svg", href: API_ENDPOINTS.PERSONAL_SOCIALS[0].href, label: "Instagram" },
+  { icon: "/svg/socials/linkedin.svg", href: API_ENDPOINTS.PERSONAL_SOCIALS[1].href, label: "LinkedIn" },
+  { icon: "/svg/socials/youtube.svg", href: API_ENDPOINTS.PERSONAL_SOCIALS[2].href, label: "YouTube" },
 ];
 
 function EditorialHero() {

@@ -1,4 +1,5 @@
 import { API_ENDPOINTS } from "@/configs";
+import Link from "next/link";
 import { ImageContainer } from "..";
 
 export default function HeroSection() {
@@ -25,7 +26,26 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="hero   tablet:h-[350px] h-[88%] tablet:w-[350px] w-[400px] p-0 mt-0 justify-self-end tablet:justify-self-center tablet:w-full tablet:p-0 tablet:flex justify-center flex tablet:p-0 p-0">
-        <HeroImage/>
+        <div className="relative flex w-full flex-col items-center">
+          <HeroImage/>
+          <div className="absolute bottom-0 right-0 rounded-tl-lg w-fit mt-4 rounded-0 border border-[#e8e4da] bg-[#0D1B34]/80 p-4 text-center backdrop-blur-sm tablet:max-w-fit">
+            <p className="monte text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">Connect With Faith</p>
+            <div className="mt-3 flex items-center justify-center gap-3">
+              {API_ENDPOINTS.PERSONAL_SOCIALS.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-[#d6cfbf] bg-white transition hover:-translate-y-0.5 hover:border-gold"
+                >
+                  <img src={item.icon} alt={item.label} style={item.label.includes('ouTube') ? { width: "30px", height: "40px" } : {}} className="h-4 w-4" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

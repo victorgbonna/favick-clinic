@@ -1,11 +1,4 @@
 const API_ENDPOINTS = {
-  GOOGLE_SHEET_LINK:'https://script.google.com/macros/s/AKfycbyzbnj2F-hJWg6c-3i0zzoEo9IO2uREjV5M0r5rldB_gintRbTDVIIBHeSyeMKMcCR6Aw/exec',
-  GOOGLE_SHEET_ID:'1n1F44RrxXW4OY-FEoQMwjkLQzGcRB1-Bi8eZin_mqeA',
-  CERTIFICATIONS:[
-    {label:'Nebosh IGC', img:'nebosh2.png' },
-    {label:'ISO 45001 IRCA certified lead Auditor', img:'iso.png'}, 
-    {label:'iosh diploma level 6', img:'iosh2.png'}
-  ],
 
 // dd
   SIDELINKS:[
@@ -33,17 +26,30 @@ const API_ENDPOINTS = {
     }
   ],
   COMMUNITY:[
-    {type:"whatsapp", link:"https://wa.me/971592295379"},
+    {type:"whatsapp", link:"https://wa.me/447956613490"},
     {type:"telegram"},
     {type:"discord"},
     {type:"slack"}
   ],
+  PERSONAL_SOCIALS:[
+    {label:"Instagram", href:"https://instagram.com/faithaminaho", icon:"/svg/socials/insta.svg"},
+    {label:"LinkedIn", href:"https://www.linkedin.com/in/faith-ebenezer/", icon:"/svg/socials/linkedin.svg"},
+    {label:"YouTube", href:"https://www.youtube.com/@LifeWithFaithAminaho", icon:"/svg/socials/youtube.svg"},
+  ],
+  BUSINESS_SOCIALS:[
+    {label:"Instagram", href:"https://instagram.com/favickskinclinic", icon:"/svg/socials/insta.svg"},
+    {label:"Facebook", href:"https://facebook.com/favickskinclinic", icon:"/svg/socials/facebook.svg"},
+    {label:"TikTok", href:"https://tiktok.com/@favickskinclinic", icon:"/svg/socials/tiktok.svg"},
+  ],
   CONTACT:{
-    WHATSAPP_LINK:"https://wa.me/8102603301",
-    PHONE:'+971592777',
-    INSTA_LINK:"https://instagram.com",
-    FACEBOOK_LINK:"https://facebook.com",
-    LINKEDIN_LINK:"https://linkedin.com"
+    CALL_LINK:"tel:+447956613490",
+    WHATSAPP_LINK:"https://wa.me/447956613490",
+    PHONE:'+44 795 661 3490',
+    EMAIL:'hello@favickskinclinic.co.uk',
+    INSTA_LINK:"https://www.instagram.com/@favickskinclinic",
+    FACEBOOK_LINK:"https://www.facebook.com/profile.php?id=61590883165688",
+    TIKTOK_LINK:"https://www.tiktok.com/@favickskinclinic",
+    // LINKEDIN_LINK:"https://linkedin.com"
   },
   BRAND_NAME_SHORT:'Favick',
   BRAND_NAME_LONG:'Favick Skin Clinic',
@@ -222,7 +228,7 @@ const API_ENDPOINTS = {
       {
         id:'skin-consultations',
         name:'Skin Consultations',
-        intro:'For clients who want expert guidance before committing to treatment, or a dedicated deep-dive into a specific concern.',
+        intro:'For clients who want expert guidance before committing to a treatment, or a dedicated deep-dive into a specific concern.',
         treatments:[
           {
             slug:'skin-consultation',
@@ -278,7 +284,7 @@ const API_ENDPOINTS = {
             name:'Favick Skin Membership - Quarterly Coaching Programme',
             duration:'3 months',
             price:'180',
-            description:'A 3-month virtual skincare coaching programme for clients who want ongoing, hands-on guidance rather than a single one-off consultation. You will start with an in-depth consultation, receive a personalised, curated skincare routine, and get two check-ins a month plus direct WhatsApp support throughout your 3 months. Membership is limited to 10-15 members per quarterly intake, so spaces are offered on a rolling basis as each new quarter opens. Longer commitments are available: 6 months (330, save 30), 12 months (600, save 120), or rolling monthly with no commitment (70/month).',
+            description:'A 3-month virtual skincare coaching programme for clients who want ongoing, hands-on guidance rather than a single one-off consultation. You will start with an in-depth consultation, receive a personalised, curated skincare routine, and get two check-ins a month plus direct WhatsApp support throughout your 3 months. Membership is limited to 10-15 members per quarterly intake, so spaces are offered on a rolling basis as each new quarter opens. Longer commitments are available: 6 months (£330, save £30), 12 months (£600, save £120), or rolling monthly with no commitment (£70/month).',
           },
         ]
       },
@@ -293,6 +299,13 @@ const API_ENDPOINTS = {
           duration:'-',
           price:'from 150',
           description:'A specialist semi-permanent makeup treatment that restores natural colour and definition to the lips, tailored specifically for deeper-toned lips. Results typically last 12-18 months before a colour refresh is needed.',
+        },
+        {
+          slug:'skin-boosters',
+          name:'Skin Boosters',
+          duration:'-',
+          price:'Coming soon',
+          description:'Advanced injectable hydration treatments designed to improve skin quality, bounce and glow. Full details will be announced ahead of launch.',
         },
       ]
     }

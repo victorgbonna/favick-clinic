@@ -222,7 +222,9 @@ function AboutCta() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              href={PAGE_ROUTES.CONTACT}
+              href={PAGE_ROUTES.BOOKING_LINK}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"
             >
               Book a Consultation

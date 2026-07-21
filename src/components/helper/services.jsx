@@ -4,13 +4,14 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 
-import { API_ENDPOINTS } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+import Link from "next/link";
 
 const PREVIEW_LIMIT = 4;
 
@@ -104,14 +105,19 @@ export default function Services() {
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-stone-700">{servicesData.INTRO}</p>
         </div>
 
-        <Swiper
-          modules={[EffectCoverflow, Navigation]}
+       <Swiper
+          modules={[EffectCoverflow, Navigation, Autoplay]}
           effect="coverflow"
           centeredSlides
-          slidesPerView={"auto"}
-          rewind={true}
-          navigation={false}
-          speed={600}
+          slidesPerView="auto"
+          rewind
+          navigation
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          speed={1000}
           initialSlide={initialSlide < 0 ? 1 : initialSlide}
           watchSlidesProgress
           onRealIndexChange={(swiper) => {
@@ -148,6 +154,7 @@ export default function Services() {
                   alt={category.name}
                   width={400}
                   height={350}
+                  style={category.id=='six-in-one-facial'?{objectPosition:"left"}:{}}
                   className="h-[320px] w-full object-cover tablet:w-full 
                   "
                 />
@@ -188,9 +195,9 @@ export default function Services() {
                   
                     <div className='flex w-full items-center justify-end'>
                       <div className='flex w-fit mt-3 p-1 items-center phone:mt-2 phone:p-0'>
-              <span className=" inline-block monte text-[13px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] phone:text-[11px] phone:tracking-[0.16em] ">
+                          <Link href={PAGE_ROUTES.TREATMENTS+'?t='+category.id} className=" inline-block monte text-[13px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] phone:text-[11px] phone:tracking-[0.16em] ">
                             View Treatments
-                          </span>
+                          </Link>
                       <img src='/svg/arrow-f.svg' alt='Arrow Right' className='w-8 h-8 phone:w-7 phone:h-7'/>
                           </div>
                           
@@ -256,7 +263,7 @@ export default function Services() {
                 Price Range: {getCategoryPriceRange(category)}
               </p>
 
-              <div className="mt-4 border-t border-[#efefef] pt-4">
+              <div className="mt-4 my-6 border-t border-[#efefef] pt-4">
                 <p className="monte text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34]">Available Services</p>
                 <ul className="mt-3 space-y-2 text-sm leading-6 text-stone-700">
                   {category.treatments.map((treatment) => (
@@ -265,12 +272,9 @@ export default function Services() {
                 </ul>
               </div>
 
-              <button
-                type="button"
-                className="mt-6 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] underline underline-offset-4"
-              >
+              <Link href={PAGE_ROUTES.TREATMENTS+'#'+category.id} className="bg-transparent monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34]! underline! underline-offset-4!">
                 View More
-              </button>
+              </Link>
             </article>
           ))}
         </section>

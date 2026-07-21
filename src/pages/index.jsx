@@ -1,5 +1,5 @@
 import { ImageContainer, Services, Accolades, Testimonials, JourneyCta, StoryNarrative } from "@/components";
-import { API_ENDPOINTS } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,7 +50,9 @@ function AfterHeroCTA() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
-            href="/consultation"
+            href={PAGE_ROUTES.BOOKING_LINK}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-md bg-gold px-8 py-3 text-sm font-semibold uppercase tracking-wide text-[#0D1A34] transition-all duration-300 hover:scale-[1.02] hover:opacity-90"
           >
             Book a Consultation

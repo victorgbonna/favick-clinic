@@ -2,6 +2,15 @@
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 import { isNotEmail } from '@/configs/inputValidation'
+import { PAGE_ROUTES } from '@/configs'
+
+const contact_data = [
+    {
+        label: 'Book Now',
+        link: PAGE_ROUTES.BOOKING_LINK,
+        primary: true,
+    },
+]
 
 export default function ContactUsForm({
     sheetName='Contact', showSubject=true, options, text

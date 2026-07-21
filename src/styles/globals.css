@@ -421,18 +421,20 @@ stroke: #d4af37;
 
 .swiper-button-next,
 .swiper-button-prev {
-    width: 48px;
-    height: 48px;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 9999px;
-    /* background: #B77A6C;W */
-    color:#B77A6C !important;
+    background: #FFFFFF;
+    padding:10px;
+    border: 1px solid #775a19;
+    color:#775a19 !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
-    color:#B77A6C !important;
+    color:#775a19 !important;
 }
 
 .swiper-button-disabled {

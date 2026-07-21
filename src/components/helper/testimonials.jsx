@@ -55,14 +55,24 @@ export default function Testimonials({
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeTestimonial = testimonials[activeIndex];
+  const [fade, setFade] = useState(false);
+  const changeTestimonial = (direction) => {
+  setFade(true);
 
-  const goPrevious = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+  setTimeout(() => {
+    setActiveIndex((prev) => {
+      if (direction === "next") {
+        return prev === testimonials.length - 1 ? 0 : prev + 1;
+      }
+      return prev === 0 ? testimonials.length - 1 : prev - 1;
+    });
 
-  const goNext = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+    setFade(false);
+  }, 200);
+};
+  const goPrevious = () => changeTestimonial("prev");
+
+  const goNext = () => changeTestimonial("next");
 
   return (
     <section className={`py-16 px-10 tablet:px-4 ${className}`}>
@@ -72,7 +82,11 @@ export default function Testimonials({
             <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#113a85]/50 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-[#0b2d6c]/40 blur-3xl" />
 
-            <div className="relative">
+          <div
+              className={`relative transition-opacity duration-200 ${
+                fade ? "opacity-0" : "opacity-100"
+              }`}
+            >
               <p className="inline-flex rounded-md bg-gold px-3 py-1 monte text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0b204a]">
                 Client Journal {activeIndex + 1}/{testimonials.length}
               </p>
@@ -93,7 +107,7 @@ export default function Testimonials({
                   <button
                     type="button"
                     onClick={goPrevious}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
+                    className="grid cursor-pointer h-10 w-10 place-items-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
                     aria-label="Previous testimonial"
                   >
                     <img style={{transform:'rotate(180deg)', filter:'grayscale(100%)'}} src="/svg/arrow-f-white.svg" alt="next" className="w-8 h-8"/>
@@ -101,7 +115,7 @@ export default function Testimonials({
                   <button
                     type="button"
                     onClick={goNext}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
+                    className="grid cursor-pointer h-10 w-10 place-items-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
                     aria-label="Next testimonial"
                   >
                     <img src="/svg/arrow-f-white.svg" alt="next" className="w-8 h-8"/>

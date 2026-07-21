@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PAGE_ROUTES } from "@/configs";
 export default function JourneyCta() {
   return (
     <section className="px-6 pb-20 pt-8 tablet:px-4 tablet:pb-14 tablet:pt-6 md:px-12 lg:px-20">
@@ -40,7 +41,7 @@ export default function JourneyCta() {
           </div>
 
           <Link
-            href="#contact"
+            href={PAGE_ROUTES.BOOKING_LINK}
             className="inline-flex w-fit items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55] tablet:mx-auto"
           >
             Start Your Journey

@@ -1,35 +1,16 @@
 import Link from "next/link";
-import { API_ENDPOINTS } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 import Image from "next/image";
 
-const socialLinks = [
-    {
-        label: "Instagram",
-        handle: "@favickskinclinic",
-        href: "https://instagram.com/favickskinclinic",
-        icon: "/svg/socials/insta.svg",
-    },
-    {
-        label: "Facebook",
-        handle: "@favickskinclinic",
-        href: "https://facebook.com/favickskinclinic",
-        icon: "/svg/socials/facebook.svg",
-    },
-    {
-        label: "TikTok",
-        handle: "@favickskinclinic",
-        href: "https://tiktok.com/@favickskinclinic",
-        icon: "/svg/socials/tiktok.svg",
-    },
-];
+const socialLinks = API_ENDPOINTS.BUSINESS_SOCIALS;
 
 const footerLinks = {
     treatments: (API_ENDPOINTS?.SERVICES?.CORE_CATEGORIES || []).map((item) => item.name),
     company: [
         { label: "Membership Plan", href: "#membership-plan" },
         { label: "Refund and Return Policy", href: "#refund-return-policy" },
-        { label: "About Us", href: "#about-us" },
-        { label: "Contact Us", href: "#contact" },
+        { label: "About Us", href: PAGE_ROUTES.ABOUT },
+        { label: "Contact Us", href: PAGE_ROUTES.CONTACT },
     ],
 };
 
@@ -102,12 +83,17 @@ export default function Footer() {
                                 </Link>
                             ))}
                         </div>
-                        <p className="pt-2"><Link href="mailto:hello@favickskinclinic.co.uk" className="hover:text-white">hello@favickskinclinic.co.uk</Link></p>
-                        <p>+44 7468 880165</p>
+                        <p className="pt-2"><Link href={`mailto:${API_ENDPOINTS.CONTACT.EMAIL}`} className="hover:text-white">{API_ENDPOINTS.CONTACT.EMAIL}</Link></p>
+                        <p>{API_ENDPOINTS.CONTACT.PHONE}</p>
                         <p>{'Opening hours: Monday-Friday, 9:30am-5:00pm (By appointments only)'}</p>
                     </div>
 
-                    <Link href="#contact" className="mt-6 inline-flex w-full items-center justify-between border border-[#193768] bg-transparent px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9eb7e2] transition hover:border-[#315791] hover:text-white">
+                    <Link href={API_ENDPOINTS.CONTACT.WHATSAPP_LINK} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-between border border-[#2c8c5f] bg-[#25D366] px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:scale-[1.02] hover:bg-[#20ba58]">
+                        Contact Us on WhatsApp
+                        <span className="text-white">&#8599;</span>
+                    </Link>
+
+                    <Link href={PAGE_ROUTES.CONTACT} className="mt-4 inline-flex w-full items-center justify-between border border-[#193768] bg-transparent px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9eb7e2] transition hover:border-[#315791] hover:text-white">
                         Join the Favick Community
                         <span className="text-[#d4af37]">&#8594;</span>
                     </Link>

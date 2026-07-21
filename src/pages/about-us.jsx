@@ -181,7 +181,7 @@ export default function AboutUPage() {
         title="Find the Right Treatment for You"
         copy="Discover thoughtful treatment options tailored to your skin, your concerns and your goals."
         actionLabel="View Our Treatments"
-        href="/#studio"
+        href={PAGE_ROUTES.TREATMENTS}
       />
 
       <Testimonials
@@ -194,7 +194,8 @@ export default function AboutUPage() {
         title="Let's Talk About Your Skin"
         copy="I'd love to meet you and create a treatment plan that feels right for your skin, goals and timeline."
         actionLabel="Book a Consultation"
-        href={PAGE_ROUTES.CONTACT}
+        href={PAGE_ROUTES.BOOKING_LINK}
+        external
       />
       <SectionCta
         title="Prefer to Speak First?"

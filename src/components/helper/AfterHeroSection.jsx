@@ -1,3 +1,7 @@
+import { PAGE_ROUTES } from "@/configs";
+
+import { API_ENDPOINTS } from "@/configs";
+
 const small_text=' text-gold monte uppercase text-[11px] font-semibold tracking-[0.25em] '
 
 
@@ -19,9 +23,9 @@ export default function AfterHeroSection() {
         style={{ lineHeight: "25px" }}
         className="text-sm text-stone-700 tablet:text-[13px] tablet:leading-7"
       >
-        {`What began as frustration soon became a purpose. I immersed myself in learning about skin health, the science behind common skin concerns and trained professionally in facials, chemical peels, microneedling and mesotherapy.`}
+        {`What began as frustration soon became a purpose. I immersed myself in learning about skin health, the science behind common skin concerns and trained professionally in facials, chemical peels, microneedling and mesotherapy. My qualifications include a Diploma in Professional Facials, a diploma in Chemical Peel, Microneedling and Mesotherapy, and a Level 2 Award in Awareness of Skin of Colour Qualification.`}
         <br /><br />
-        {`Today, I combine my experience working within the NHS with advanced aesthetics training to provide safe, thoughtful skincare that puts your needs first. Every treatment is carefully chosen because I believe healthy, confident skin starts with understanding it properly.`}
+        {`Today, I combine my experience working within the NHS with advanced aesthetics training to provide safe, thoughtful skincare that puts your needs first. I also graduated from Robert Gordon University with First Class Honours in Business Management, which shapes the structure, professionalism and client experience behind Favick Skin Clinic. Every treatment is carefully chosen because I believe healthy, confident skin starts with understanding it properly.`}
         <br /><br />
         {`While treating melanin-rich skin is a particular passion of mine, Favick welcomes every skin tone. My goal is simple - to help every client feel confident in their own skin.`}
       </p>
@@ -35,11 +39,11 @@ export default function AfterHeroSection() {
 }
 
 
-const socialLinks = [
-  { icon: "/svg/socials/insta.svg", href: "https://instagram.com/favickskinclinic", label: "Instagram" },
-  { icon: "/svg/socials/facebook.svg", href: "https://facebook.com/favickskinclinic", label: "Facebook" },
-  { icon: "/svg/socials/tiktok.svg", href: "https://tiktok.com/@favickskinclinic", label: "TikTok" },
-];
+// const socialLinks = [
+//   { icon: "/svg/socials/insta.svg", href: API_ENDPOINTS.BUSINESS_SOCIALS[0].href, label: "Instagram" },
+//   { icon: "/svg/socials/facebook.svg", href: API_ENDPOINTS.BUSINESS_SOCIALS[1].href, label: "Facebook" },
+//   { icon: "/svg/socials/tiktok.svg", href: API_ENDPOINTS.BUSINESS_SOCIALS[2].href, label: "TikTok" },
+// ];
 
 // export default function AfterHeroSection() {
 //   return (
