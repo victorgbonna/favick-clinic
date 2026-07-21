@@ -32,7 +32,7 @@ const API_ENDPOINTS = {
     {type:"slack"}
   ],
   PERSONAL_SOCIALS:[
-    {label:"Instagram", href:"https://instagram.com/faithaminaho", icon:"/svg/socials/insta.svg"},
+    // {label:"Instagram", href:"https://instagram.com/faithaminaho", icon:"/svg/socials/insta.svg"},
     {label:"LinkedIn", href:"https://www.linkedin.com/in/faith-ebenezer/", icon:"/svg/socials/linkedin.svg"},
     {label:"YouTube", href:"https://www.youtube.com/@LifeWithFaithAminaho", icon:"/svg/socials/youtube.svg"},
   ],
