@@ -1,5 +1,7 @@
 const API_ENDPOINTS = {
 
+  BOOKING_LINK:"https://www.fresha.com/book-now/favick-skin-clinic-dv7zsaiz/all-offer?share=true&pId=3031156",
+
 // dd
   SIDELINKS:[
     // {
@@ -26,7 +28,7 @@ const API_ENDPOINTS = {
     }
   ],
   COMMUNITY:[
-    {type:"whatsapp", link:"https://wa.me/447956613490"},
+    {type:"whatsapp", link:"https://wa.me/447468880165"},
     {type:"telegram"},
     {type:"discord"},
     {type:"slack"}
@@ -42,9 +44,9 @@ const API_ENDPOINTS = {
     {label:"TikTok", href:"https://tiktok.com/@favickskinclinic", icon:"/svg/socials/tiktok.svg"},
   ],
   CONTACT:{
-    CALL_LINK:"tel:+447956613490",
-    WHATSAPP_LINK:"https://wa.me/447956613490",
-    PHONE:'+44 795 661 3490',
+    CALL_LINK:"tel:+447468880165",
+    WHATSAPP_LINK:"https://wa.me/447468880165",
+    PHONE:'+44 7468 880165',
     EMAIL:'hello@favickskinclinic.co.uk',
     INSTA_LINK:"https://www.instagram.com/@favickskinclinic",
     FACEBOOK_LINK:"https://www.facebook.com/profile.php?id=61590883165688",
@@ -69,6 +71,13 @@ const API_ENDPOINTS = {
             duration:'30 mins',
             price:'45',
             description:"A swift and effective treatment designed specifically for busy people. This rejuvenating facial includes a thorough cleanse, gentle exfoliation, a nourishing mask, deep hydration, and protective SPF. It's the ideal choice to prepare your complexion for an upcoming event, or to keep your skin looking its best as part of your regular skincare routine. Plus, enjoy the added benefit of a relaxing facial massage to leave you feeling refreshed and radiant.",
+          },
+          {
+            slug:'co2-skin-rejuvenation-facial',
+            name:'CO₂ Skin Rejuvenation Facial',
+            duration:'45 minutes',
+            price:'65',
+            description:'A non-invasive carboxytherapy treatment that harnesses your skin\'s natural renewal process to restore a brighter, healthier-looking complexion. By encouraging increased circulation and oxygen delivery to the skin, it helps stimulate collagen production, improving firmness, radiance, skin tone and overall texture -all without needles or downtime.\n\nYour treatment begins with a gentle skin preparation peel to prepare the skin, followed by a relaxing facial massage before your CO₂ skin rejuvenation treatment.\n\nIdeal for: Fine lines • Uneven skin tone and texture • Dullness • Under-eye darkness • Acne scarring • Loss of firmness\n\nBest results: A course of 4 treatments, spaced 1–2 weeks apart, is recommended for optimal results.\n\nAdd-on to any facial: +15 minutes | £30',
           },
           {
             slug:'clarifying-facial',
@@ -111,20 +120,6 @@ const API_ENDPOINTS = {
             duration:'75 mins',
             price:'95',
             description:"Experience the ultimate in skin revitalisation with our luxurious bespoke facial, designed specifically for your unique skin needs. This session begins with a thorough consultation to address concerns like acne, pigmentation, dehydration, and more. Every element of your facial is tailored using selected products and techniques to ensure safe, effective results. Your treatment includes a personalised skin consultation, double cleanse, gentle exfoliation, and, if needed, extractions. A customised mask, professional serums, moisturiser, and SPF protection will enhance your glow. Enjoy a relaxing face, decolletage, and scalp massage, along with personalised aftercare advice. The result is deeply cleansed, balanced, hydrated, and radiant skin, with a plan tailored to your individual goals.",
-          },
-          {
-            slug:'hydroglow-facial',
-            name:'HydroGlow Facial',
-            duration:'60 mins',
-            price:'95',
-            description:"Why choose one facial when you can experience six advanced technologies in a single treatment? Our signature facial combines hydrodermabrasion, ultrasonic skin scrubber, oxygen infusion, cold hammer therapy, radiofrequency, and microcurrent to deeply cleanse, hydrate, firm, and revitalise your skin. Ideal for dullness, congestion, dehydration, uneven texture, loss of firmness, and early signs of ageing.",
-          },
-          {
-            slug:'hydroglow-course-of-3',
-            name:'HydroGlow Facial - Course of 3',
-            duration:'3 hrs total',
-            price:'255 (save 10%)',
-            description:'For visible, longer-lasting results, a course of three 6in1 Facials spaced across a few weeks allows skin to rebuild texture and radiance progressively, ideal for congested, dull, or uneven skin.',
           },
         ]
       },

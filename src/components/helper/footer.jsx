@@ -7,8 +7,8 @@ const socialLinks = API_ENDPOINTS.BUSINESS_SOCIALS;
 const footerLinks = {
     treatments: (API_ENDPOINTS?.SERVICES?.CORE_CATEGORIES || []).map((item) => item.name),
     company: [
-        { label: "Membership Plan", href: "#membership-plan" },
-        { label: "Refund and Return Policy", href: "#refund-return-policy" },
+        { label: "Membership Plan", href: PAGE_ROUTES.MEMBERSHIP_PLAN },
+        { label: "Refund and Return Policy", href: PAGE_ROUTES.REFUND_POLICY },
         { label: "About Us", href: PAGE_ROUTES.ABOUT },
         { label: "Contact Us", href: PAGE_ROUTES.CONTACT },
     ],
@@ -85,7 +85,9 @@ export default function Footer() {
                         </div>
                         <p className="pt-2"><Link href={`mailto:${API_ENDPOINTS.CONTACT.EMAIL}`} className="hover:text-white">{API_ENDPOINTS.CONTACT.EMAIL}</Link></p>
                         <p>{API_ENDPOINTS.CONTACT.PHONE}</p>
-                        <p>{'Opening hours: Monday-Friday, 9:30am-5:00pm (By appointments only)'}</p>
+                        <p>Virtual consultations: Monday &amp; Friday</p>
+                        <p>In-clinic: Tuesday &amp; Saturday</p>
+                        <p>Pink Lily, 13 Carden Place, Aberdeen AB10 1UR.</p>
                     </div>
 
                     <Link href={API_ENDPOINTS.CONTACT.WHATSAPP_LINK} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-between border border-[#2c8c5f] bg-[#25D366] px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.22em] text-white transition hover:scale-[1.02] hover:bg-[#20ba58]">
@@ -106,7 +108,7 @@ export default function Footer() {
                     <p className="text-[12px] normal-case tracking-[0.12em] italic">{'Expert Skincare for Every Skin Tone'}</p>
                 </div>
                 <div className="flex items-center gap-6">
-                    <Link href="#refund-return-policy" className="hover:text-[#a9c0e8]">Refund & Return Policy</Link>
+                    <Link href={PAGE_ROUTES.REFUND_POLICY} className="hover:text-[#a9c0e8]">Refund & Return Policy</Link>
                     {/* <Link href="#" className="hover:text-[#a9c0e8]">Terms</Link> */}
                 </div>
             </div>

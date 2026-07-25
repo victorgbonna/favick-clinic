@@ -1,4 +1,4 @@
-import { API_ENDPOINTS } from "@/configs";
+import { PAGE_ROUTES } from "@/configs";
 import Link from "next/link";
 import { ImageContainer } from "..";
 
@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* Texture Overlay */}
       <div className=" absolute inset-0 water-overlay pointer-events-none z-0 w-[300px] h-[300px] tablet:w-[180px] tablet:h-[180px]" />
       <div className="tablet:order-2 relative z-10 tablet:text-center">
-        <p className=" mb-7 text-gold monte uppercase text-[10px] font-semibold tracking-[0.25em] tablet:mb-4 tablet:text-[9px] ">{'MEET OUR FOUNDER . THE STORY' ?? API_ENDPOINTS.BRAND_NAME_LONG+' . UNITED KINGDOM'} </p>
+        <p className=" mb-7 text-gold monte uppercase text-[10px] font-semibold tracking-[0.25em] tablet:mb-4 tablet:text-[9px] ">MEET OUR FOUNDER . THE STORY</p>
 
         <div className="playfair text-5xl text-[#0D1A34] tablet:text-4xl">
           <p className="font-bold">Hi 👋🏽, I'm Faith Aminaho, <span className="italic text-lg hidden">the founder of Favick Skin Clinic.</span></p>
@@ -30,20 +30,14 @@ export default function HeroSection() {
           <HeroImage/>
           <div className="absolute bottom-0 right-0 rounded-tl-lg w-fit mt-4 rounded-0 border border-[#e8e4da] bg-[#0D1B34]/80 p-4 text-center backdrop-blur-sm tablet:max-w-fit">
             <p className="monte text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">Connect With Faith</p>
-            <div className="mt-3 flex items-center justify-center gap-3">
-              {API_ENDPOINTS.PERSONAL_SOCIALS.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.label}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-[#d6cfbf] bg-white transition hover:-translate-y-0.5 hover:border-gold"
-                >
-                  <img src={item.icon} alt={item.label} style={item.label.includes('ouTube') ? { width: "30px", height: "40px" } : {}} className="h-4 w-4" />
-                </Link>
-              ))}
-            </div>
+            <Link
+              href={PAGE_ROUTES.FAITH_LINKTREE}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex items-center justify-center border border-[#d6cfbf] bg-white px-4 py-3 monte text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0D1B34] transition hover:-translate-y-0.5 hover:border-gold"
+            >
+              Click Here
+            </Link>
           </div>
         </div>
       </div>

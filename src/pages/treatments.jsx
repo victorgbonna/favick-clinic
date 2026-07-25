@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { API_ENDPOINTS } from "@/configs";
 import Link from "next/link";
+import PageMeta from "@/components/helper/PageMeta";
 
 function extractPriceValues(priceText) {
   const matches = String(priceText).match(/\d+(?:\.\d+)?/g);
@@ -27,7 +28,7 @@ function TreatmentCard({ treatment }) {
       <p className="mt-2 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {treatment.duration} | {formatPriceWithSymbol(treatment.price)}
       </p>
-      <p className="mt-3 text-sm leading-7 text-stone-700">{treatment.description}</p>
+      <p className="mt-3 whitespace-pre-line text-sm leading-7 text-stone-700">{treatment.description}</p>
     </article>
   );
 }
@@ -76,6 +77,7 @@ export default function TreatmentsPage() {
 
   return (
     <div className="bg-surface mt-14 tablet:mt-10">
+      <PageMeta title="Treatments and Services" description="Explore Favick Skin Clinic's facials, chemical peels, microneedling, mesotherapy, skin consultations and virtual skincare services." />
       <header className="py-24 px-[80px] tablet:px-5 text-center bg-[#f8f8f6]">
         <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Tailored Excellence</p>
         <h1 className="mt-4 playfair text-5xl font-bold text-[#0d1b34] tablet:text-4xl">Treatments and Services</h1>
@@ -83,6 +85,10 @@ export default function TreatmentsPage() {
           {servicesData.INTRO}
         </p>
       </header>
+
+      <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
+        <p className="monte text-[11px] font-semibold uppercase tracking-[0.16em]">20% off all treatments for our first 20 founding clients.</p>
+      </div>
 
       <nav className="sticky top-[88px] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 py-4">
         <div className="max-w-7xl mx-auto flex overflow-x-auto pb-3 tablet:flex-nowrap tablet:justify-start justify-start gap-8 px-6 tablet:pl-4 tablet:px-2 tablet:gap-x-20">
@@ -171,7 +177,7 @@ export default function TreatmentsPage() {
 
           <div className="mt-7 flex flex-wrap gap-4">
             <Link
-              href={API_ENDPOINTS.CONTACT.WHATSAPP_LINK}
+              href={API_ENDPOINTS.BOOKING_LINK}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"

@@ -2,12 +2,12 @@
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 import { isNotEmail } from '@/configs/inputValidation'
-import { PAGE_ROUTES } from '@/configs'
+import { API_ENDPOINTS } from '@/configs'
 
 const contact_data = [
     {
         label: 'Book Now',
-        link: PAGE_ROUTES.BOOKING_LINK,
+        link: API_ENDPOINTS.BOOKING_LINK,
         primary: true,
     },
 ]

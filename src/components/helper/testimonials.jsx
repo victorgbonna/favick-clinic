@@ -26,10 +26,10 @@ const testimonials = [
   },
   {
     name: "Ruth K.",
-    role: "HydroGlow Client",
+    role: "6-in-1 Facial Client",
     rating: 5,
     review:
-      "HydroGlow gave me that fresh, polished look before my event. My skin looked smooth and hydrated in photos, and people kept asking what I used.",
+      "The 6-in-1 Facial gave me that fresh, polished look before my event. My skin looked smooth and hydrated in photos, and people kept asking what I used.",
   },
   {
     name: "Sarah O.",

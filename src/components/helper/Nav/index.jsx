@@ -76,7 +76,7 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
                 </Link>
                 ))}
 
-                <Link href={PAGE_ROUTES.BOOKING_LINK} target="_blank" rel="noreferrer" className="block w-full bg-[#0d1b34] py-4 text-center uppercase tracking-[0.15em] text-[13px] text-white transition-all hover:bg-gold hover:text-primary">
+                <Link href={API_ENDPOINTS.BOOKING_LINK} target="_blank" rel="noreferrer" className="block w-full bg-[#0d1b34] py-4 text-center uppercase tracking-[0.15em] text-[13px] text-white transition-all hover:bg-gold hover:text-primary">
                 BOOK US
                 </Link>
             </div>
@@ -114,7 +114,7 @@ function PcNav({nav_list, scrolledPast, activeNav}){
                 </Link>
             ))}
 
-            <Link href={PAGE_ROUTES.BOOKING_LINK} target="_blank" rel="noreferrer" className="bg-[#0d1b34] text-white! text-[13px] uppercase tracking-[0.1em] px-8 py-3 monte hover:bg-gold transition-all duration-500">
+            <Link href={API_ENDPOINTS.BOOKING_LINK} target="_blank" rel="noreferrer" className="bg-[#0d1b34] text-white! text-[13px] uppercase tracking-[0.1em] px-8 py-3 monte hover:bg-gold transition-all duration-500">
                 BOOK US
             </Link>
             </div>

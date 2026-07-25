@@ -32,7 +32,9 @@ function formatPriceWithSymbol(priceText) {
 }
 
 function getCategoryPriceRange(category) {
-  const allPrices = category.treatments.flatMap((treatment) => extractPriceValues(treatment.price));
+  const allPrices = category.treatments
+    .map((treatment) => extractPriceValues(treatment.price)[0])
+    .filter((price) => Number.isFinite(price));
   if (!allPrices.length) return "-";
 
   const min = Math.min(...allPrices);

@@ -6,7 +6,9 @@ const PAGE_ROUTES = {
   COURSES: "/courses",
   BLOGS: "/blogs",
   CONTACT: "/contact-us",
-  BOOKING_LINK: "https://wa.me/447956613490",
+  REFUND_POLICY: "/refund-policy",
+  MEMBERSHIP_PLAN: "/treatments#virtual-services",
+  FAITH_LINKTREE: "https://linktr.ee/aminahofaith",
   A_BLOG:(id)=>{
     return '/blogs/hse/'+id
   },
@@ -16,8 +18,8 @@ const PAGE_ROUTES = {
     YOUTUBE: "https://www.youtube.com/@LifeWithFaithAminaho",
   },
   CONTACT_LINK:{
-    WHATSAPP_LINK:"https://wa.me/447956613490",
-    PHONE:'+44 795 661 3490'
+    WHATSAPP_LINK:"https://wa.me/447468880165",
+    PHONE:'+44 7468 880165'
   },
   
 };

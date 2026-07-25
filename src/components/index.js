@@ -13,6 +13,8 @@ export {default as CertificateHelper} from './helper/SectionHelper/certificate';
 
 export {default as Footer} from './helper/footer';
 
+export {default as CookieConsent} from './helper/CookieConsent';
+
 export {default as SectionUnderlineHelper} from './helper/sectionUnderlineHelper';
 
 export {default as MainLayout} from './helper/MainLayout';

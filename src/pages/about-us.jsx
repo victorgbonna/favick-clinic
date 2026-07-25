@@ -8,7 +8,8 @@ import {
   StoryNarrative,
   Testimonials,
 } from "@/components";
-import { PAGE_ROUTES } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
+import PageMeta from "@/components/helper/PageMeta";
 
 const missionValues = [
   {
@@ -171,6 +172,7 @@ function SectionCta({
 export default function AboutUPage() {
   return (
     <div className="bg-surface">
+      <PageMeta title="About Us" description="Meet and discover Favick Skin Clinic's expert-led, personalised approach to healthy skin for every skin tone." />
       {/* <EditorialHero />
       <MeetFaith /> */}
       <HeroSection/>
@@ -194,7 +196,7 @@ export default function AboutUPage() {
         title="Let's Talk About Your Skin"
         copy="I'd love to meet you and create a treatment plan that feels right for your skin, goals and timeline."
         actionLabel="Book a Consultation"
-        href={PAGE_ROUTES.BOOKING_LINK}
+        href={API_ENDPOINTS.BOOKING_LINK}
         external
       />
       <SectionCta

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
+import PageMeta from "@/components/helper/PageMeta";
 
 const contactCards = [
 //   {
@@ -32,6 +33,7 @@ const contactCards = [
 export default function ContactUsPage() {
   return (
     <div className="bg-surface pt-24 tablet:pt-20">
+      <PageMeta title="Contact Us" description="Contact Favick Skin Clinic in Aberdeen to book a consultation, discuss your skin concerns or plan your next treatment." />
       <section className="bg-[#f8f8f6] px-6 py-20 text-center tablet:px-5 tablet:py-14 md:px-12 lg:px-20">
         <div className="mx-auto max-w-4xl">
           <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Contact Us</p>
@@ -101,8 +103,8 @@ export default function ContactUsPage() {
           </article>
 
           <aside className="rounded-3xl border border-[#ece8df] bg-[#0d1b34] p-8 text-white shadow-sm tablet:p-6">
-            {/* <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Clinic Details</p> */}
-            {/* <h2 className="mt-3 playfair text-4xl font-bold tablet:text-3xl">Quick contact details</h2>
+            <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Clinic Details</p>
+            <h2 className="mt-3 playfair text-4xl font-bold tablet:text-3xl">Quick contact details</h2>
 
             <div className="mt-6 space-y-4 text-sm leading-7 text-white/85">
               <p>
@@ -111,8 +113,10 @@ export default function ContactUsPage() {
               <p>
                 Email: <Link href={`mailto:${API_ENDPOINTS.CONTACT.EMAIL}`} className="text-white underline underline-offset-4">{API_ENDPOINTS.CONTACT.EMAIL}</Link>
               </p>
-              <p>Opening hours: Monday-Friday, 9:30am-5:00pm (By appointments only)</p>
-            </div> */}
+              <p>Virtual consultations: Monday &amp; Friday</p>
+              <p>In-clinic: Tuesday &amp; Saturday</p>
+              <p>Pink Lily, 13 Carden Place, Aberdeen AB10 1UR.</p>
+            </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <p className="monte text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">Best First Step</p>

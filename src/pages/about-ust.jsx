@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Accolades, Testimonials } from "@/components";
-import { PAGE_ROUTES } from "@/configs";
+import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 import { useIntersectionObserver } from "@/hooks";
+import PageMeta from "@/components/helper/PageMeta";
 
 const founderHighlights = [
   "Senior NHS practitioner with a patient-first clinical approach",
@@ -222,7 +223,7 @@ function AboutCta() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              href={PAGE_ROUTES.BOOKING_LINK}
+              href={API_ENDPOINTS.BOOKING_LINK}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"
@@ -253,6 +254,7 @@ function AboutCta() {
 export default function AboutUsPage() {
   return (
     <div>
+      <PageMeta title="About Favick Skin Clinic" description="Learn about the clinical expertise, values and personalised skin care behind Favick Skin Clinic." />
       <StoryHero />
       <StorySection />
       <LifestyleBreak image="/images/treatments/facials.png" alt="Lifestyle image of premium treatment environment" />
