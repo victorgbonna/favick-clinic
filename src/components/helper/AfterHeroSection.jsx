@@ -1,6 +1,7 @@
 import { PAGE_ROUTES } from "@/configs";
 
 import { API_ENDPOINTS } from "@/configs";
+import ScrollReveal from "./ScrollReveal";
 
 const small_text=' text-gold monte uppercase text-[11px] font-semibold tracking-[0.25em] '
 
@@ -8,7 +9,7 @@ const small_text=' text-gold monte uppercase text-[11px] font-semibold tracking-
 export default function AfterHeroSection() {
   return (
     <main className="w-full grid grid-cols-2 items-center bg-surface-container-low px-[120px] py-[100px] tablet:grid-cols-1 tablet:gap-10 tablet:px-4 tablet:py-16">
-      <div className="w-[90%] tablet:w-full">
+      <ScrollReveal variant="left" className="w-[90%] tablet:w-full">
         <p className={`${small_text} tablet:text-[10px] tablet:tracking-[0.2em]`}>EXPERT SKINCARE FOR EVERY SKIN TONE</p>
 
         <div className="border-[#d4af3764] border-r-[0.5px] pt-6 tablet:border-r-0 tablet:border-b-[0.5px] tablet:pb-6 tablet:pt-5">
@@ -16,9 +17,9 @@ export default function AfterHeroSection() {
             {`"I created what I wish I'd found during my own skin journey."`}
           </p>
         </div>
-      </div>
+      </ScrollReveal>
 
-      <div className="tablet:w-full">
+      <ScrollReveal variant="right" delay={140} className="tablet:w-full">
        <p
         style={{ lineHeight: "25px" }}
         className="text-sm text-stone-700 tablet:text-[13px] tablet:leading-7"
@@ -33,7 +34,7 @@ export default function AfterHeroSection() {
         <hr className="border-[#d4af3764] mt-4 tablet:mt-5" />
 
         
-      </div>
+      </ScrollReveal>
     </main>
   );
 }

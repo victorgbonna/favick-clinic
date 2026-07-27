@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import Link from "next/link";
+import ScrollReveal from "./ScrollReveal";
 
 const PREVIEW_LIMIT = 4;
 
@@ -102,11 +103,12 @@ export default function Services() {
     <section id="studio" className="bg-surface-container-low py-20 px-24 tablet:px-4 tablet:py-14">
       <div className="mx-auto max-w-7xl tablet:max-w-full">
         <div className="mb-10 text-center">
-          <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">{API_ENDPOINTS.BRAND_NAME_LONG}</p>
-          <h2 className="mt-3 playfair text-4xl font-bold text-[#0d1b34] md:text-5xl">{servicesData.TITLE}</h2>
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-stone-700">{servicesData.INTRO}</p>
+          <ScrollReveal as="p" variant="up" className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">{API_ENDPOINTS.BRAND_NAME_LONG}</ScrollReveal>
+          <ScrollReveal as="h2" variant="up" delay={90} className="mt-3 playfair text-4xl font-bold text-[#0d1b34] md:text-5xl">{servicesData.TITLE}</ScrollReveal>
+          <ScrollReveal as="p" variant="up" delay={170} className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-stone-700">{servicesData.INTRO}</ScrollReveal>
         </div>
 
+       <ScrollReveal variant="scale" delay={120}>
        <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
           effect="coverflow"
@@ -210,6 +212,7 @@ export default function Services() {
             </SwiperSlide>
           ))}
         </Swiper>
+        </ScrollReveal>
 
         {/* <div id="treatments-list" className="mt-12 rounded-3xl bg-white p-6 shadow-sm md:p-10">
           <div className="flex flex-col gap-4 border-b border-[#ebebeb] pb-6 md:flex-row md:items-end md:justify-between">
@@ -255,8 +258,8 @@ export default function Services() {
         </div>
 
         <section className="mt-6 grid gap-6 md:grid-cols-2">
-          {consultationCategories.map((category) => (
-            <article key={category.id} className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
+          {consultationCategories.map((category, index) => (
+            <ScrollReveal as="article" key={category.id} variant="up" delay={index * 110} className="rounded-3xl bg-white p-6 shadow-sm md:p-8">
               <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Consultation Services</p>
               <h3 className="mt-2 playfair text-3xl font-bold text-[#0d1b34]">{category.name}</h3>
               <p className="mt-3 text-sm leading-7 text-stone-700">{category.intro}</p>
@@ -277,7 +280,7 @@ export default function Services() {
               <Link href={PAGE_ROUTES.TREATMENTS+'#'+category.id} className="bg-transparent monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34]! underline! underline-offset-4!">
                 View More
               </Link>
-            </article>
+            </ScrollReveal>
           ))}
         </section>
 

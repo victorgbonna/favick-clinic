@@ -1,13 +1,14 @@
 import { PAGE_ROUTES } from "@/configs";
 import Link from "next/link";
 import { ImageContainer } from "..";
+import ScrollReveal from "./ScrollReveal";
 
 export default function HeroSection() {
   return (
     <section className="tablet:mt-[120px] tablet:gap-y-10 justify-center relative w-full grid grid-cols-[40%_60%] overflow-hidden h-[90vh] mt-[130px] pb-10 items-center px-[120px] tablet:grid-cols-1 tablet:h-auto tablet:mt-14 tablet:px-6 tablet:pt-8 tablet:pb-10">
       {/* Texture Overlay */}
       <div className=" absolute inset-0 water-overlay pointer-events-none z-0 w-[300px] h-[300px] tablet:w-[180px] tablet:h-[180px]" />
-      <div className="tablet:order-2 relative z-10 tablet:text-center">
+      <ScrollReveal variant="left" className="tablet:order-2 relative z-10 tablet:text-center">
         <p className=" mb-7 text-gold monte uppercase text-[10px] font-semibold tracking-[0.25em] tablet:mb-4 tablet:text-[9px] ">MEET OUR FOUNDER . THE STORY</p>
 
         <div className="playfair text-5xl text-[#0D1A34] tablet:text-4xl">
@@ -24,8 +25,8 @@ export default function HeroSection() {
             {`As a woman of colour, one of my biggest frustrations was how little of the advice out there actually understood skin like mine. Most of it simply wasn't built with melanin-rich skin in mind, and that made an already frustrating process feel even more isolating.`}
           </p>
         </div>
-      </div>
-      <div className="hero   tablet:h-[350px] h-[88%] tablet:w-[350px] w-[400px] p-0 mt-0 justify-self-end tablet:justify-self-center tablet:w-full tablet:p-0 tablet:flex justify-center flex tablet:p-0 p-0">
+      </ScrollReveal>
+      <ScrollReveal variant="image" delay={180} className="hero tablet:h-[350px] h-[88%] tablet:w-[350px] w-[400px] p-0 mt-0 justify-self-end tablet:justify-self-center tablet:w-full tablet:p-0 tablet:flex justify-center flex">
         <div className="relative flex w-full flex-col items-center">
           <HeroImage/>
           <div className="absolute bottom-0 right-0 rounded-tl-lg w-fit mt-4 rounded-0 border border-[#e8e4da] bg-[#0D1B34]/80 p-4 text-center backdrop-blur-sm tablet:max-w-fit">
@@ -40,7 +41,7 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

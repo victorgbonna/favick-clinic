@@ -1,4 +1,4 @@
-import { ImageContainer, Services, Accolades, Testimonials, JourneyCta, StoryNarrative } from "@/components";
+import { ImageContainer, Services, Accolades, Testimonials, JourneyCta, StoryNarrative, ScrollReveal } from "@/components";
 import OfficeGallery from "@/components/helper/OfficeGallery";
 import PageMeta from "@/components/helper/PageMeta";
 import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
@@ -9,14 +9,12 @@ export default function Home() {
   return (
     <div>
       <PageMeta title="Expert Skincare for Every Skin Tone" description="Favick Skin Clinic offers personalised facials, chemical peels, microneedling, mesotherapy and expert skincare guidance in Aberdeen." />
-      <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
-        <p className="monte text-[11px] font-semibold uppercase tracking-[0.16em]">20% off all treatments for our first 20 founding clients.</p>
-      </div>
+
       {/* <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"> */}
         {/* <HeroSection/>
         <AfterHeroSection/> */}
         <StoryNarrative/>
-        <OfficeGallery/>
+        {/* <OfficeGallery/> */}
         <AfterHeroCTA/>
         {/* <section className="mt-10 rounded-3xl bg-white p-6 shadow-sm md:p-10">
           <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Credentials</p>
@@ -45,32 +43,33 @@ function AfterHeroCTA() {
   return (
     <section className="bg-[#0D1A34] px-[120px] py-14 tablet:px-5 tablet:py-10">
       <div className="mx-auto max-w-5xl text-center">
-        <h3 className="mt-5 playfair text-4xl font-semibold text-white tablet:text-3xl">
+        <ScrollReveal as="h3" variant="up" className="mt-5 playfair text-4xl font-semibold text-white tablet:text-3xl">
           Your Skin Deserves Expert Care.
-        </h3>
+        </ScrollReveal>
 
-        <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-white/75 tablet:text-sm">
+        <ScrollReveal as="p" variant="up" delay={100} className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-white/75 tablet:text-sm">
           Whether you're ready to begin your skincare journey or simply need
           expert advice, we're here to help you find the right treatment for
           your skin with personalised care every step of the way.
-        </p>
+        </ScrollReveal>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
+          <ScrollReveal variant="scale" delay={180}><Link
             href={API_ENDPOINTS.BOOKING_LINK}
             target="_blank"
             rel="noreferrer"
-            className="rounded-md bg-gold px-8 py-3 text-sm font-semibold uppercase tracking-wide text-[#0D1A34] transition-all duration-300 hover:scale-[1.02] hover:opacity-90"
+            className="rounded-md bg-gold px-8 py-6 text-sm font-semibold uppercase tracking-wide text-[#0D1A34] transition-all duration-300 hover:scale-[1.02] hover:opacity-90"
           >
+            {/* <p className="py-4">Book a Consultation</p> */}
             Book a Consultation
-          </Link>
+          </Link></ScrollReveal>
 
-          <Link
+          <ScrollReveal variant="scale" delay={260}><Link
             href="/treatments"
             className="rounded-md border border-white/30 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-gold hover:bg-white/5"
           >
             View Treatments
-          </Link>
+          </Link></ScrollReveal>
         </div>
       </div>
     </section>

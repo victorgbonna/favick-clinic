@@ -452,6 +452,39 @@ stroke: #d4af37;
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.65, 0.2, 1);
 }
 
+/* Scroll reveal system --------------------------------------------------- */
+.scroll-reveal {
+  --reveal-delay: 0ms;
+  opacity: 0;
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay), transform 850ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay), clip-path 850ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  will-change: opacity, transform, clip-path;
+}
+.scroll-reveal--up { transform: translate3d(0, 30px, 0); }
+.scroll-reveal--down { transform: translate3d(0, -24px, 0); }
+.scroll-reveal--left { transform: translate3d(-38px, 0, 0); }
+.scroll-reveal--right { transform: translate3d(38px, 0, 0); }
+.scroll-reveal--scale { transform: scale(0.94); }
+.scroll-reveal--image { transform: none; }
+.scroll-reveal.is-revealed { opacity: 1; transform: translate3d(0, 0, 0) scale(1); clip-path: inset(0 0 0 0 round 1rem); will-change: auto; }
+
+@media (max-width: 768px) {
+  .scroll-reveal--up { transform: translate3d(0, 20px, 0); }
+  .scroll-reveal--down { transform: translate3d(0, -18px, 0); }
+  .scroll-reveal--left { transform: translate3d(-22px, 0, 0); }
+  .scroll-reveal--right { transform: translate3d(22px, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body { scroll-behavior: auto; }
+  .scroll-reveal, .scroll-reveal--up, .scroll-reveal--down, .scroll-reveal--left, .scroll-reveal--right, .scroll-reveal--scale, .scroll-reveal--image {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+  .hero-image-container::before { animation: none; }
+}
+
 .hero-image-container {
   position: relative;
   padding: 3px;

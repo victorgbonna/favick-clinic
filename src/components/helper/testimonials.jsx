@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
 
 const testimonials = [
   {
@@ -78,7 +79,7 @@ export default function Testimonials({
     <section className={`py-16 px-10 tablet:px-4 ${className}`}>
       <div className=" rounded-3xl border border-[#d8e2f1] bg-white p-10 tablet:px-4">
         <div className="grid gap-8 gap-x-[4%] grid-cols-[40%_56%] tablet:grid-cols-1">
-          <article className="order-2 relative overflow-hidden rounded-2xl bg-[#0D1B34] p-7 text-white md:p-9">
+          <ScrollReveal as="article" variant="left" delay={110} className="order-2 relative overflow-hidden rounded-2xl bg-[#0D1B34] p-7 text-white md:p-9">
             <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#113a85]/50 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-[#0b2d6c]/40 blur-3xl" />
 
@@ -124,9 +125,9 @@ export default function Testimonials({
                 </div>
               </div>
             </div>
-          </article>
+          </ScrollReveal>
 
-          <div>
+          <ScrollReveal variant="right">
             <p className="inline-flex items-center gap-2 rounded-md bg-[#dce5f3] px-4 py-2 monte text-[10px] font-semibold uppercase tracking-[0.24em] text-[#173f89]">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               {sectionLabel}
@@ -157,7 +158,7 @@ export default function Testimonials({
                 </button>
               ))}
             </div> */}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

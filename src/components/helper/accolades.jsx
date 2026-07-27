@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Accolades() {
     const clinicalItems = [
@@ -16,13 +17,13 @@ export default function Accolades() {
             <div className="rounded-sm border border-[#ececec] bg-[#f8f8f8] px-6 py-8 md:px-10 md:py-10 tablet:px-5 tablet:py-7">
                 <div className="grid gap-10 lg:grid-cols-1">
                     <div>
-                        <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Clinical Excellence</p>
+                        <ScrollReveal as="p" variant="left" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Clinical Excellence</ScrollReveal>
                         <div className="mt-6 flex flex-wrap items-stretch justify-between gap-4 tablet:flex-col tablet:gap-4">
-                            {clinicalItems.map((item) => (
-                                <div key={item.label} className="flex min-w-[220px] flex-1 items-center gap-3 text-[#7d7d7d] tablet:min-w-0 tablet:flex-none">
+                            {clinicalItems.map((item, index) => (
+                                <ScrollReveal key={item.label} variant="up" delay={index * 110} className="flex min-w-[220px] flex-1 items-center gap-3 text-[#7d7d7d] tablet:min-w-0 tablet:flex-none">
                                     <Image src={item.icon} alt={item.label} width={30} height={30} className="tablet:h-7 tablet:w-7" />
                                     <p className="playfair text-[14px] font-medium tablet:text-[13px] tablet:leading-6">{item.label}</p>
-                                </div>
+                                </ScrollReveal>
                             ))}
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ImageContainer } from "..";
+import { ImageContainer, ScrollReveal } from "..";
 
 const missionValues = [
   {
@@ -36,29 +36,29 @@ export default function StoryNarrative() {
   return (
     <section className="mx-auto grid max-w-[1280px] grid-cols-12 items-center gap-8 px-[80px] py-24 tablet:grid-cols-1 tablet:px-5 tablet:mt-2 mt-10">
       <aside className="col-span-5 tablet:col-span-1">
-        <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
+        <ScrollReveal as="p" variant="left" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
           Welcome to Favick Skin Clinic
-        </p>
+        </ScrollReveal>
 
-        <h1 className="mt-4 playfair text-5xl font-bold leading-[1.08] text-[#0d1b34] tablet:text-4xl">
+        <ScrollReveal as="h1" variant="up" delay={100} className="mt-4 playfair text-5xl font-bold leading-[1.08] text-[#0d1b34] tablet:text-4xl">
           Expert Skincare
           <br />
           <span className="font-medium italic">
             For Every Skin Tone
           </span>
-        </h1>
+        </ScrollReveal>
 
-        <blockquote className="mt-10 border-l border-gold/50 pl-7 tablet:pl-3 playfair text-2xl italic leading-snug text-[#775a19] tablet:mt-7 tablet:text-xl">
+        <ScrollReveal as="blockquote" variant="up" delay={220} className="mt-10 border-l border-gold/50 pl-7 tablet:pl-3 playfair text-2xl italic leading-snug text-[#775a19] tablet:mt-7 tablet:text-xl">
           {
             '"We believe everyone deserves to feel confident in their own skin."'
           }
-        </blockquote>
+        </ScrollReveal>
 
         {/* {newLocal} */}
       </aside>
 
       <div className="col-span-7 space-y-12 tablet:col-span-1 justify-self-end tablet:justify-self-center">
-        <article className="relative  w-fit rounded-2xl border border-[#e8e4da] shadow-[0_30px_90px_-40px_rgba(13,27,52,0.35)]">
+        <ScrollReveal as="article" variant="image" delay={140} className="relative w-fit rounded-2xl border border-[#e8e4da] shadow-[0_30px_90px_-40px_rgba(13,27,52,0.35)]">
           <div className="group relative overflow-hidden rounded-xl w-[450px] tablet:w-[350px]">
             <ImageContainer
               src="/images/models.png"
@@ -85,7 +85,7 @@ export default function StoryNarrative() {
               </p>
             </div>
           </div>
-        </article>
+        </ScrollReveal>
 
         {/* <div className="grid gap-6 tablet:gap-4 md:grid-cols-3">
           {missionValues.map((item) => (
