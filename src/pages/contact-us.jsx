@@ -33,7 +33,7 @@ const contactCards = [
 
 export default function ContactUsPage() {
   return (
-    <div className="bg-surface pt-24 tablet:pt-20">
+    <div className="bg-surface pt-24 tablet:pt-10">
       <PageMeta title="Contact Us" description="Contact Favick Skin Clinic in Aberdeen to book a consultation, discuss your skin concerns or plan your next treatment." />
       <section className="bg-[#f8f8f6] px-6 py-20 text-center tablet:px-5 tablet:py-14 md:px-12 lg:px-20">
         <div className="mx-auto max-w-4xl">
@@ -94,7 +94,7 @@ export default function ContactUsPage() {
                     href={card.href}
                     target={card.external ? "_blank" : undefined}
                     rel={card.external ? "noreferrer" : undefined}
-                    className="rounded-2xl border border-[#ece8df] bg-[#fbfaf8] p-5 transition hover:border-[#0d1b34]"
+                    className="rounded-2xl border border-[#ece8df] bg-[#fbfaf8] p-5 transition hover:border-[#0d1b34] w-full block"
                   >
                     {content}
                   </Link></ScrollReveal>
@@ -103,28 +103,44 @@ export default function ContactUsPage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal as="aside" variant="right" delay={120} className="rounded-3xl border border-[#ece8df] bg-[#0d1b34] p-8 text-white shadow-sm tablet:p-6">
-            <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Clinic Details</p>
+          <ScrollReveal as="aside" variant="right" delay={120} className="rounded-3xl  border border-[#ece8df] bg-[#0d1b34] p-8 text-white shadow-sm tablet:p-6">
+            <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold mt-4">Clinic Details</p>
             <h2 className="mt-3 playfair text-4xl font-bold tablet:text-3xl">Quick contact details</h2>
 
-            <div className="mt-6 space-y-4 text-sm leading-7 text-white/85">
+            <div className="mt-6 mb-2 space-y-4 text-sm leading-7 text-white/85">
               <p>
                 Call: <Link href={API_ENDPOINTS.CONTACT.CALL_LINK} target="_blank" rel="noreferrer" className="text-white underline underline-offset-4">{API_ENDPOINTS.CONTACT.PHONE}</Link>
               </p>
               <p>
                 Email: <Link href={`mailto:${API_ENDPOINTS.CONTACT.EMAIL}`} className="text-white underline underline-offset-4">{API_ENDPOINTS.CONTACT.EMAIL}</Link>
               </p>
-              <p>Virtual consultations: Monday &amp; Friday</p>
+              {/* <p>Virtual consultations: Monday &amp; Friday</p>
               <p>In-clinic: Tuesday &amp; Saturday</p>
-              <p>Pink Lily, 13 Carden Place, Aberdeen AB10 1UR.</p>
+              <p>Pink Lily, 13 Carden Place, Aberdeen AB10 1UR.</p> */}
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="mb-4 rounded-2xl border border-white/10 bg-white/5 p-5">
               <p className="monte text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">Best First Step</p>
               <p className="mt-3 text-sm leading-7 text-white/85">
                 If you are unsure which treatment to choose, start with a consultation or send a WhatsApp message with
                 your main skin concern and we will guide you from there.
               </p>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-6xl">
+          <ScrollReveal as="div" variant="up" delay={180} className="overflow-hidden rounded-3xl border border-[#ece8df] bg-white p-2 shadow-sm">
+            <div className="w-full overflow-hidden rounded-[22px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2164.5350139089383!2d-2.121615123773227!3d57.145011283910186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48840e27d96a750d%3A0x29d1f522e85a9e4c!2sPink%20Lily!5e0!3m2!1sen!2sng!4v1785230997388!5m2!1sen!2sng"
+                className="h-[350px] w-full tablet:h-[450px]"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Pink Lily location"
+              />
             </div>
           </ScrollReveal>
         </div>

@@ -5,6 +5,7 @@ import { API_ENDPOINTS } from "@/configs";
 import Link from "next/link";
 import PageMeta from "@/components/helper/PageMeta";
 import ScrollReveal from "@/components/helper/ScrollReveal";
+import ImageContainer from "@/components/helper/ImageContainer";
 
 function extractPriceValues(priceText) {
   const matches = String(priceText).match(/\d+(?:\.\d+)?/g);
@@ -126,8 +127,26 @@ export default function TreatmentsPage() {
 
           {selectedCategory ? (
             <ScrollReveal variant="scale" delay={80} className="mt-8 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
-              <h3 className="playfair text-3xl font-bold text-[#0d1b34]">{selectedCategory.name}</h3>
-              <p className="mt-3 max-w-4xl text-sm leading-7 text-stone-700">{selectedCategory.intro}</p>
+              <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+                <div>
+                  <h3 className="playfair text-3xl font-bold text-[#0d1b34]">{selectedCategory.name}</h3>
+                  <p className="mt-3 max-w-4xl text-sm leading-7 text-stone-700">{selectedCategory.intro}</p>
+                </div>
+
+                {selectedCategory.image ? (
+                  <ScrollReveal as="div" variant="image" delay={120} className="overflow-hidden rounded-2xl border border-[#ece8df] bg-white p-2 shadow-sm">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[14px]">
+                      <ImageContainer
+                        src={selectedCategory.image}
+                        alt={selectedCategory.name}
+                        className="h-full w-full"
+                        imgClass="object-cover"
+                        parentColor="bg-[#f8f8f6]"
+                      />
+                    </div>
+                  </ScrollReveal>
+                ) : null}
+              </div>
 
               <div className="mt-8 grid gap-5 md:grid-cols-2">
                 {selectedCategory.treatments.map((treatment, index) => (
