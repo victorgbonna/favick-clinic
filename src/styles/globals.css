@@ -360,6 +360,27 @@ stroke: #d4af37;
     object-fit: cover;
     object-position: top;
 }
+@keyframes promoFade {
+      0% {
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .promo-fade {
+      animation: promoFade 5s ease-in-out infinite;
+    }
 
 /* Floating animation */
 

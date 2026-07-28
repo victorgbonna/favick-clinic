@@ -53,14 +53,14 @@ function AfterHeroCTA() {
           your skin with personalised care every step of the way.
         </ScrollReveal>
 
-        <ScrollReveal
+        {/* <ScrollReveal
           as="p"
           variant="up"
           delay={140}
           className="mx-auto mt-6 inline-flex rounded-md border border-gold/40 bg-gold/10 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-gold"
         >
           20% off all treatments for our first 20 founding clients.
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <ScrollReveal variant="scale" delay={180}><Link

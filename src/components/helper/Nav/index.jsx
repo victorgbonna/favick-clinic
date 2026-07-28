@@ -1,3 +1,4 @@
+"use client";
 import React, { useContext, useEffect, useState } from 'react';
 import ImageContainer from './../ImageContainer';
 import Link from 'next/link';
@@ -30,6 +31,7 @@ export default function Nav({scrolledPast,scrolledPastMobile, activeNav}) {
 
     return (    
         <nav className='text-black phone:fixed phone:top-0 phone:left-0 phone:right-0 phone:w-full z-[70]'>
+            
             <PcNav activeNav={activeNav} nav_list={nav_list} scrolledPast={scrolledPast}/>
             <PhoneNav activeNav={activeNav} nav_list={nav_list} scrolledPast={scrolledPast}/>
         </nav>
@@ -40,6 +42,9 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
     return(
         <div className={`pc:hidden bigpc:hidden text-black tablet:hidden phone:block transition-[background-color,box-shadow] duration-300 ease-out ${scrolledPast ? 'bg-[#F8F8F6]' : 'bg-transparent'}`}
         >
+        <div className="bg-[#d4af37] w-full text-center text-[#0d1b34]">
+            <PromoBanner/>
+        </div>
         <div className='flex justify-between tablet:block tablet:p-4 items-center px-6 py-0'>
            <div className="flex justify-between items-center">
             <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center'>
@@ -90,19 +95,22 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
     )
 }
 function PcNav({nav_list, scrolledPast, activeNav}){
-    const [showNav, setShowNav]= useState(false)
+    // const [showNav, setShowNav]= useState(false)
     
     return(
      <div
         className="phone:hidden fixed top-0 left-0 right-0 z-50 w-full bg-surface backdrop-blur-xl border-outline-variant/5 transition-all duration-300 ease-out"
         >
-        <div className="max-w-[1280px] mx-auto px-[80px] py-5 flex items-center justify-between">
+         <div className=" py-[4px] w-full text-center text-[#0d1b34]">
+            <PromoBanner/>
+        </div>   
+        <div className="max-w-[1280px] mx-auto px-[80px] py-3 flex items-center justify-between">
             <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center transition-transform duration-300 ease-out hover:-translate-y-0.5'>
                 <Image
                     src="/images/favick-logo.png"
                     alt="Favick Clinic"
-                    width={60}
-                    height={60}
+                    width={55}
+                    height={55}
                     className="h-auto"
                     priority
                 />
@@ -128,3 +136,34 @@ function PcNav({nav_list, scrolledPast, activeNav}){
     </div>
     )
 }
+
+
+function PromoBanner() {
+     const [activeMessage, setActiveMessage] = useState(0);
+
+  const messages = [
+    <>
+      Get <strong>20% off all treatments</strong> for our first{" "}
+      <strong>20 founding clients</strong>.
+    </>,
+    <>
+      <strong>Limited founding offer</strong> - book your treatment and{" "}
+      <strong>save 20%</strong>.
+    </>,
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveMessage((current) => (current + 1) % messages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+    return (
+        <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
+            <p className="monte promo-fade text-[13px] font-medium tracking-[0.08em]">
+                {messages[activeMessage]}
+            </p>
+        </div>
+    );
+}   

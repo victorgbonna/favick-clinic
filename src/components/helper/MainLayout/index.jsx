@@ -37,7 +37,7 @@ export default function MainLayout({ children, isLoggedIn}) {
           scrolledPast={scrolledPast} 
           scrolledPastMobile={scrolledPastMobile}/>
         <div className="flex flex-col items-center">
-        <main className={`bg-surface max-w-[1700px] w-full`}
+        <main className={`bg-surface max-w-[1700px] w-full pt-10`}
         style={{
           overflowX:'hidden'
         }}
