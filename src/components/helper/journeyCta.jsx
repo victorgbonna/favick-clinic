@@ -42,12 +42,15 @@ export default function JourneyCta() {
           </ScrollReveal>
 
           <ScrollReveal variant="scale" delay={180}>
-          <Link
-            href={API_ENDPOINTS.BOOKING_LINK}
-            className="inline-flex w-fit items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55] tablet:mx-auto"
-          >
-            Start Your Journey
-          </Link>
+          <div className="flex justify-end tablet:justify-center w-full">
+            <Link
+              href={API_ENDPOINTS.BOOKING_LINK}
+              className="inline-flex w-fit bg-gold px-8 py-4 monte text-[12px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55] tablet:mx-auto"
+            >
+              Start Your Journey
+            </Link>
+          </div>
+          
           </ScrollReveal>
         </div>
       </div>
