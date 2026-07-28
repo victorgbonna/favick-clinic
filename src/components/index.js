@@ -31,6 +31,7 @@ export { default as LazyBackground } from './helper/LazyBackground';
 export { default as ContactForm } from "./helper/ContactForm";
 export { default as HeroSection } from "./helper/HeroSection";
 export { default as AfterHeroSection } from "./helper/AfterHeroSection";
+export { default as ScrollReveal } from "./helper/ScrollReveal";
 // export { default as StoryNarrative } from "./helper/StoryNarrative";
 // StoryNarrative
 // DataFetch

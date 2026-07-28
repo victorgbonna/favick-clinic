@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const galleryImages = [
   { src: "/images/office/clinic-interior-01.jpeg", alt: "Favick Skin Clinic treatment space", className: "md:row-span-2" },
@@ -13,16 +14,16 @@ export default function OfficeGallery() {
     <section className="bg-[#f8f8f6] px-6 py-20 tablet:px-5 tablet:py-14 md:px-12 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Our Clinic</p>
-          <h2 className="mt-3 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">A Calm Space for Your Skin Journey</h2>
-          <p className="mt-4 text-sm leading-7 text-stone-700">
+          <ScrollReveal as="p" variant="up" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Our Clinic</ScrollReveal>
+          <ScrollReveal as="h2" variant="up" delay={90} className="mt-3 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">A Calm Space for Your Skin Journey</ScrollReveal>
+          <ScrollReveal as="p" variant="up" delay={170} className="mt-4 text-sm leading-7 text-stone-700">
             Step into a welcoming, private setting designed for thoughtful care, expert treatments and a little time for yourself.
-          </p>
+          </ScrollReveal>
         </div>
 
         <div className="mt-10 grid auto-rows-[180px] grid-cols-2 gap-3 tablet:auto-rows-[150px] md:grid-cols-4 md:auto-rows-[220px]">
           {galleryImages.map((image, index) => (
-            <figure key={image.src} className={`group relative overflow-hidden rounded-2xl ${image.className}`}>
+            <ScrollReveal as="figure" key={image.src} variant="image" delay={index * 90} className={`group relative overflow-hidden rounded-2xl ${image.className}`}>
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -32,7 +33,7 @@ export default function OfficeGallery() {
                 priority={index < 2}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b34]/30 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-            </figure>
+            </ScrollReveal>
           ))}
         </div>
       </div>

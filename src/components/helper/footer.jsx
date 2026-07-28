@@ -85,8 +85,15 @@ export default function Footer() {
                         </div>
                         <p className="pt-2"><Link href={`mailto:${API_ENDPOINTS.CONTACT.EMAIL}`} className="hover:text-white">{API_ENDPOINTS.CONTACT.EMAIL}</Link></p>
                         <p>{API_ENDPOINTS.CONTACT.PHONE}</p>
-                        <p>Virtual consultations: Monday &amp; Friday</p>
-                        <p>In-clinic: Tuesday &amp; Saturday</p>
+                        <div className="pt-2">
+                            <p className="monte text-[10px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]">Opening Hours</p>
+                            <dl className="mt-3 space-y-2 text-sm leading-6 text-[#c4d3f0]">
+                                <div><dt className="inline text-white">Monday:</dt> <dd className="inline">{'Virtual, 12:00 AM – 4:00 PM'}</dd></div>
+                                <div><dt className="inline text-white">Tuesday:</dt> <dd className="inline">{'In-clinic, 9:30 AM – 6:00 PM'}</dd></div>
+                                <div><dt className="inline text-white">Friday:</dt> <dd className="inline">{'Virtual, 12:00 AM – 4:00 PM'}</dd></div>
+                                <div><dt className="inline text-white">Saturday:</dt> <dd className="inline">{'In-clinic, 9:30 AM – 6:00 PM'}</dd></div>
+                            </dl>
+                        </div>
                         <p>Pink Lily, 13 Carden Place, Aberdeen AB10 1UR.</p>
                     </div>
 

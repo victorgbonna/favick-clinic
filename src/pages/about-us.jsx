@@ -7,6 +7,7 @@ import {
   HeroSection,
   StoryNarrative,
   Testimonials,
+  ScrollReveal,
 } from "@/components";
 import { API_ENDPOINTS, PAGE_ROUTES } from "@/configs";
 import PageMeta from "@/components/helper/PageMeta";
@@ -142,26 +143,26 @@ function SectionCta({
       <div className={`mx-auto max-w-7xl rounded-2xl border px-7 py-8 tablet:px-5 ${baseClass}`}>
         <div className="grid items-center gap-4 md:grid-cols-[1fr_auto]">
           <div>
-            <h3 className={`playfair text-4xl font-bold leading-[1.08] tablet:text-3xl ${titleClass}`}>{title}</h3>
-            <p className={`mt-2 text-sm leading-7 tablet:text-[13px] tablet:leading-6 ${copyClass}`}>{copy}</p>
+            <ScrollReveal as="h3" variant="left" className={`playfair text-4xl font-bold leading-[1.08] tablet:text-3xl ${titleClass}`}>{title}</ScrollReveal>
+            <ScrollReveal as="p" variant="up" delay={90} className={`mt-2 text-sm leading-7 tablet:text-[13px] tablet:leading-6 ${copyClass}`}>{copy}</ScrollReveal>
           </div>
 
           {external ? (
-            <a
+            <ScrollReveal variant="scale" delay={170}><Link
               href={href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"
+              className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45]"
             >
               {actionLabel}
-            </a>
+            </Link></ScrollReveal>
           ) : (
-            <Link
+            <ScrollReveal variant="scale" delay={170}><Link
               href={href}
-              className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55]"
+              className="inline-flex items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] hover:bg-[#e0be55]"
             >
               {actionLabel}
-            </Link>
+            </Link></ScrollReveal>
           )}
         </div>
       </div>

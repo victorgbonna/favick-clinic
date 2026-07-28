@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { API_ENDPOINTS } from "@/configs";
 import Link from "next/link";
 import PageMeta from "@/components/helper/PageMeta";
+import ScrollReveal from "@/components/helper/ScrollReveal";
 
 function extractPriceValues(priceText) {
   const matches = String(priceText).match(/\d+(?:\.\d+)?/g);
@@ -21,28 +22,28 @@ function formatPriceWithSymbol(priceText) {
   return `\u00A3${first}`;
 }
 
-function TreatmentCard({ treatment }) {
+function TreatmentCard({ treatment, delay = 0 }) {
   return (
-    <article className="rounded-2xl border border-[#ece8df] bg-white p-5">
+    <ScrollReveal as="article" variant="up" delay={delay} className="rounded-2xl border border-[#ece8df] bg-white p-5">
       <h3 className="playfair text-2xl font-semibold text-[#0d1b34]">{treatment.name}</h3>
       <p className="mt-2 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {treatment.duration} | {formatPriceWithSymbol(treatment.price)}
       </p>
       <p className="mt-3 whitespace-pre-line text-sm leading-7 text-stone-700">{treatment.description}</p>
-    </article>
+    </ScrollReveal>
   );
 }
 
 function CategorySection({ id, label, title, intro, treatments }) {
   return (
     <section id={id} className="mt-14 scroll-mt-32 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
-      <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">{label}</p>
-      <h2 className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">{title}</h2>
-      {intro ? <p className="mt-3 max-w-4xl text-sm leading-7 text-stone-700">{intro}</p> : null}
+      <ScrollReveal as="p" variant="left" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">{label}</ScrollReveal>
+      <ScrollReveal as="h2" variant="up" delay={70} className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">{title}</ScrollReveal>
+      {intro ? <ScrollReveal as="p" variant="up" delay={140} className="mt-3 max-w-4xl text-sm leading-7 text-stone-700">{intro}</ScrollReveal> : null}
 
       <div className="mt-8 grid gap-5 md:grid-cols-2">
-        {treatments.map((treatment) => (
-          <TreatmentCard key={treatment.slug} treatment={treatment} />
+        {treatments.map((treatment, index) => (
+          <TreatmentCard key={treatment.slug} treatment={treatment} delay={180 + index * 75} />
         ))}
       </div>
     </section>
@@ -79,11 +80,11 @@ export default function TreatmentsPage() {
     <div className="bg-surface mt-14 tablet:mt-10">
       <PageMeta title="Treatments and Services" description="Explore Favick Skin Clinic's facials, chemical peels, microneedling, mesotherapy, skin consultations and virtual skincare services." />
       <header className="py-24 px-[80px] tablet:px-5 text-center bg-[#f8f8f6]">
-        <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Tailored Excellence</p>
-        <h1 className="mt-4 playfair text-5xl font-bold text-[#0d1b34] tablet:text-4xl">Treatments and Services</h1>
-        <p className="mt-6 max-w-3xl mx-auto text-sm leading-7 text-on-surface-variant">
+        <ScrollReveal as="p" variant="up" className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Tailored Excellence</ScrollReveal>
+        <ScrollReveal as="h1" variant="up" delay={90} className="mt-4 playfair text-5xl font-bold text-[#0d1b34] tablet:text-4xl">Treatments and Services</ScrollReveal>
+        <ScrollReveal as="p" variant="up" delay={170} className="mt-6 max-w-3xl mx-auto text-sm leading-7 text-on-surface-variant">
           {servicesData.INTRO}
-        </p>
+        </ScrollReveal>
       </header>
 
       <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
@@ -100,10 +101,10 @@ export default function TreatmentsPage() {
 
       <main className="max-w-7xl mx-auto px-6 py-16 tablet:py-8 tablet:px-4">
         <section id="treatments" className="scroll-mt-32">
-          <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Treatments</p>
-          <h2 className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">Choose a Category</h2>
+          <ScrollReveal as="p" variant="left" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Treatments</ScrollReveal>
+          <ScrollReveal as="h2" variant="up" delay={70} className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">Choose a Category</ScrollReveal>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <ScrollReveal variant="up" delay={140} className="mt-6 flex flex-wrap gap-3">
             {coreCategories.map((category) => {
               const isActive = category.id === selectedCategory?.id;
               return (
@@ -121,19 +122,19 @@ export default function TreatmentsPage() {
                 </button>
               );
             })}
-          </div>
+          </ScrollReveal>
 
           {selectedCategory ? (
-            <div className="mt-8 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
+            <ScrollReveal variant="scale" delay={80} className="mt-8 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
               <h3 className="playfair text-3xl font-bold text-[#0d1b34]">{selectedCategory.name}</h3>
               <p className="mt-3 max-w-4xl text-sm leading-7 text-stone-700">{selectedCategory.intro}</p>
 
               <div className="mt-8 grid gap-5 md:grid-cols-2">
-                {selectedCategory.treatments.map((treatment) => (
-                  <TreatmentCard key={treatment.slug} treatment={treatment} />
+                {selectedCategory.treatments.map((treatment, index) => (
+                  <TreatmentCard key={treatment.slug} treatment={treatment} delay={index * 75} />
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           ) : null}
         </section>
 
@@ -167,7 +168,7 @@ export default function TreatmentsPage() {
           />
         ) : null}
 
-        <section className="mt-14 rounded-3xl border border-[#0d2246] bg-[#0D1B34] px-6 py-10 text-white md:px-10">
+        <ScrollReveal as="section" variant="scale" className="mt-14 rounded-3xl border border-[#0d2246] bg-[#0D1B34] px-6 py-10 text-white md:px-10">
           <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Ready to Start?</p>
           <h2 className="mt-3 playfair text-4xl font-bold tablet:text-3xl">Book the Right Treatment for Your Skin</h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/85">
@@ -193,7 +194,7 @@ export default function TreatmentsPage() {
               Chat on WhatsApp
             </Link>
           </div>
-        </section>
+        </ScrollReveal>
       </main>
     </div>
   );

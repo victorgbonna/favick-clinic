@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { API_ENDPOINTS } from "@/configs";
+import ScrollReveal from "./ScrollReveal";
 export default function JourneyCta() {
   return (
     <section className="px-6 pb-20 pt-8 tablet:px-4 tablet:pb-14 tablet:pt-6 md:px-12 lg:px-20">
@@ -29,7 +30,7 @@ export default function JourneyCta() {
         <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-[28%] border-l border-[#132d5c] md:block" />
 
         <div className="relative z-10 grid items-center gap-8 grid-cols-[1fr_auto] tablet:grid-cols-1 tablet:gap-6">
-          <div>
+          <ScrollReveal variant="left">
                 <h3 className="playfair font-bold leading-tight text-white text-6xl tablet:text-4xl tablet:text-center">
                 The transformation
                 <br />
@@ -38,14 +39,16 @@ export default function JourneyCta() {
                 <p className="mt-5 max-w-lg text-sm leading-7 text-white/80 tablet:mx-auto tablet:max-w-md tablet:text-center tablet:text-[13px] tablet:leading-6">
                     {"Every great skin journey starts with understanding your skin. Book a personalised consultation and let us create a treatment plan that's right for you."}
                 </p>
-          </div>
+          </ScrollReveal>
 
+          <ScrollReveal variant="scale" delay={180}>
           <Link
             href={API_ENDPOINTS.BOOKING_LINK}
             className="inline-flex w-fit items-center justify-center bg-gold px-8 py-4 monte text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0a1f45] transition hover:bg-[#e0be55] tablet:mx-auto"
           >
             Start Your Journey
           </Link>
+          </ScrollReveal>
         </div>
       </div>
     </section>
