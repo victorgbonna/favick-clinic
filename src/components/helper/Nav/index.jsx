@@ -143,12 +143,10 @@ function PromoBanner() {
 
   const messages = [
     <>
-      Get <strong>20% off all treatments</strong> for our first{" "}
-      <strong>20 founding clients</strong>.
+        To enjoy 20% off all treatments.
     </>,
     <>
-      <strong>Limited founding offer</strong> - book your treatment and{" "}
-      <strong>save 20%</strong>.
+      Book your treatment and use code <strong>GLOW20</strong> at checkout.
     </>,
   ];
 

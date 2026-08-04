@@ -3,7 +3,13 @@ import PageMeta from "@/components/helper/PageMeta";
 export default function RefundPolicyPage() {
   return (
     <main className="mt-14 bg-surface tablet:mt-10">
-      <PageMeta title="Refund, Cancellation and Rescheduling Policy" description="Read Favick Skin Clinic's policy on cancellations, rescheduling, deposits, refunds, treatment courses and membership programmes." />
+      <PageMeta
+        title="Refund, Cancellation and Rescheduling Policy"
+        description="Read Favick Skin Clinic's cancellation, rescheduling, deposit, refund, treatment course and membership programme policies."
+        path="/refund-policy"
+        ogTitle="Favick Skin Clinic Refund and Cancellation Policy"
+        ogDescription="Review booking terms for cancellations, rescheduling, deposits, refunds, courses and skincare membership programmes."
+      />
       <header className="bg-[#f8f8f6] px-6 py-20 text-center md:px-12">
         <p className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Favick Skin Clinic</p>
         <h1 className="mt-4 playfair text-5xl font-bold text-[#0d1b34] tablet:text-4xl">Refund, Cancellation &amp; Rescheduling Policy</h1>

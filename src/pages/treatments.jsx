@@ -25,12 +25,24 @@ function formatPriceWithSymbol(priceText) {
 
 function TreatmentCard({ treatment, delay = 0 }) {
   return (
-    <ScrollReveal as="article" variant="up" delay={delay} className="rounded-2xl border border-[#ece8df] bg-white p-5">
+    <ScrollReveal
+      as={Link}
+      href={API_ENDPOINTS.BOOKING_LINK}
+      target="_blank"
+      rel="noreferrer"
+      variant="up"
+      delay={delay}
+      className="block rounded-2xl border border-[#ece8df] bg-white p-5 transition hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-md"
+      aria-label={`Book ${treatment.name} on Fresha`}
+    >
       <h3 className="playfair text-2xl font-semibold text-[#0d1b34]">{treatment.name}</h3>
       <p className="mt-2 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {treatment.duration} | {formatPriceWithSymbol(treatment.price)}
       </p>
       <p className="mt-3 whitespace-pre-line text-sm leading-7 text-stone-700">{treatment.description}</p>
+      <span className="mt-5 inline-flex monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] underline underline-offset-4">
+        Book on Fresha
+      </span>
     </ScrollReveal>
   );
 }
@@ -47,6 +59,30 @@ function CategorySection({ id, label, title, intro, treatments }) {
           <TreatmentCard key={treatment.slug} treatment={treatment} delay={180 + index * 75} />
         ))}
       </div>
+    </section>
+  );
+}
+
+function BeforeYouBookSection({ content, firstVisit }) {
+  return (
+    <section className="scroll-mt-32">
+      <ScrollReveal as="article" variant="up" className="rounded-3xl border border-[#ece8df] bg-white p-6 md:p-10">
+        <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Client Guidance</p>
+        <h2 className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">{content.title}</h2>
+        <p className="mt-4 whitespace-pre-line text-sm leading-7 text-stone-700">{content.description}</p>
+      </ScrollReveal>
+
+      <ScrollReveal as="article" variant="scale" delay={120} className="mt-8 rounded-3xl border border-[#0d2246] bg-[#0D1B34] p-6 text-white md:p-10">
+        <p className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Recommended for First-Time Clients</p>
+        <h2 className="mt-2 playfair text-4xl font-bold tablet:text-3xl">{firstVisit.title}</h2>
+        <p className="mt-4 max-w-4xl whitespace-pre-line text-sm leading-7 text-white/85">{firstVisit.intro}</p>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {firstVisit.treatments.map((treatment, index) => (
+            <TreatmentCard key={treatment.slug} treatment={treatment} delay={180 + index * 75} />
+          ))}
+        </div>
+      </ScrollReveal>
     </section>
   );
 }
@@ -79,7 +115,13 @@ export default function TreatmentsPage() {
 
   return (
     <div className="bg-surface mt-14 tablet:mt-10">
-      <PageMeta title="Treatments and Services" description="Explore Favick Skin Clinic's facials, chemical peels, microneedling, mesotherapy, skin consultations and virtual skincare services." />
+      <PageMeta
+        title="Treatments and Services"
+        description="Explore Favick Skin Clinic facials, first-visit treatments, chemical peels, microneedling, mesotherapy, consultations and virtual skincare services."
+        path="/treatments"
+        ogTitle="Favick Skin Clinic Treatments and Services"
+        ogDescription="View first-visit facials, advanced treatments, skin consultations and virtual services designed around your skin needs."
+      />
       <header className="py-24 px-[80px] tablet:px-5 text-center bg-[#f8f8f6]">
         <ScrollReveal as="p" variant="up" className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Tailored Excellence</ScrollReveal>
         <ScrollReveal as="h1" variant="up" delay={90} className="mt-4 playfair text-5xl font-bold text-[#0d1b34] tablet:text-4xl">Treatments and Services</ScrollReveal>
@@ -89,7 +131,7 @@ export default function TreatmentsPage() {
       </header>
 
       {/* <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
-        <p className="monte text-[11px] font-semibold uppercase tracking-[0.16em]">20% off all treatments for our first 20 founding clients.</p>
+        <p className="monte text-[11px] font-semibold uppercase tracking-[0.16em]">Use code GLOW20 at checkout.</p>
       </div> */}
 
       <nav className="sticky top-[88px] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 py-4">
@@ -101,6 +143,11 @@ export default function TreatmentsPage() {
       </nav>
 
       <main className="max-w-7xl mx-auto px-6 py-16 tablet:py-8 tablet:px-4">
+        <BeforeYouBookSection
+          content={servicesData.BEFORE_YOU_BOOK}
+          firstVisit={servicesData.FIRST_VISIT_TREATMENTS}
+        />
+
         <section id="treatments" className="scroll-mt-32">
           <ScrollReveal as="p" variant="left" className="monte text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">Treatments</ScrollReveal>
           <ScrollReveal as="h2" variant="up" delay={70} className="mt-2 playfair text-4xl font-bold text-[#0d1b34] tablet:text-3xl">Choose a Category</ScrollReveal>

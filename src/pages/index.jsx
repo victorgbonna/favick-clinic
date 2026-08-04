@@ -8,7 +8,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <PageMeta title="Expert Skincare for Every Skin Tone" description="Favick Skin Clinic offers personalised facials, chemical peels, microneedling, mesotherapy and expert skincare guidance in Aberdeen." />
+      <PageMeta
+        title="Expert Skincare for Every Skin Tone"
+        description="Favick Skin Clinic in Aberdeen offers personalised facials, advanced skin treatments and expert guidance for every skin tone."
+        path="/"
+        ogTitle="Favick Skin Clinic | Expert Skincare in Aberdeen"
+        ogDescription="Begin your skin journey with tailored facials, consultations and advanced treatments designed around your skin goals."
+      />
 
       {/* <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"> */}
         {/* <HeroSection/>
@@ -59,7 +65,7 @@ function AfterHeroCTA() {
           delay={140}
           className="mx-auto mt-6 inline-flex rounded-md border border-gold/40 bg-gold/10 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-gold"
         >
-          20% off all treatments for our first 20 founding clients.
+          Use code GLOW20 at checkout.
         </ScrollReveal> */}
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

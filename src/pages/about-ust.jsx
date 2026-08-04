@@ -254,7 +254,13 @@ function AboutCta() {
 export default function AboutUsPage() {
   return (
     <div>
-      <PageMeta title="About Favick Skin Clinic" description="Learn about the clinical expertise, values and personalised skin care behind Favick Skin Clinic." />
+      <PageMeta
+        title="Founder Story"
+        description="Explore Favick Skin Clinic's founder story, clinical values and commitment to thoughtful skincare for melanin-rich and all skin tones."
+        path="/about-ust"
+        ogTitle="Favick Skin Clinic Founder Story"
+        ogDescription="Discover the personal story, values and clinical care philosophy behind Favick Skin Clinic."
+      />
       <StoryHero />
       <StorySection />
       <LifestyleBreak image="/images/treatments/facials.png" alt="Lifestyle image of premium treatment environment" />

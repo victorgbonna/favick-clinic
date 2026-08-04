@@ -45,19 +45,22 @@ function getCategoryPriceRange(category) {
 
 function ProductCard({ treatment }) {
   return (
-    <article className="rounded-2xl border border-[#efefef] bg-[#fcfcfc] p-5">
+    <Link
+      href={API_ENDPOINTS.BOOKING_LINK}
+      target="_blank"
+      rel="noreferrer"
+      className="block rounded-2xl border border-[#efefef] bg-[#fcfcfc] p-5 transition hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-md"
+      aria-label={`Book ${treatment.name} on Fresha`}
+    >
       <h4 className="playfair text-2xl font-semibold text-[#0d1b34]">{treatment.name}</h4>
       <p className="mt-2 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
         {treatment.duration}  |  {formatPriceWithSymbol(treatment.price)}
       </p>
       <p className="mt-3 text-sm leading-7 text-stone-700">{treatment.description}</p>
-      <button
-        type="button"
-        className="mt-5 monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] underline underline-offset-4"
-      >
-        Book Me Now
-      </button>
-    </article>
+      <span className="mt-5 inline-flex monte text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0d1b34] underline underline-offset-4">
+        Book on Fresha
+      </span>
+    </Link>
   );
 }
 

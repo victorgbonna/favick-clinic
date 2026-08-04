@@ -58,6 +58,30 @@ const API_ENDPOINTS = {
   SERVICES:{
     TITLE:'Full Treatment Guide',
     INTRO:"Each treatment below includes what it targets, what's included, and what to expect.",
+    BEFORE_YOU_BOOK:{
+      title:'Before You Book',
+      description:"Every appointment begins with a professional skin assessment to ensure your chosen treatment is safe, suitable, and the best option for your skin on the day.\n\nIf, following your assessment, we believe another treatment would be more appropriate or deliver better results, we'll explain our recommendation and discuss your options with you before proceeding. This may include recommending one of our First Visit Treatments or another treatment that is better suited to your skin's current needs.\n\nOur recommendations are always made with your skin's health, safety, and long-term results in mind.",
+    },
+    FIRST_VISIT_TREATMENTS:{
+      title:'First Visit Treatments',
+      intro:"We believe healthy skin starts with understanding your skin.\n\nThat's why we recommend all first-time clients begin with The Favick Reveal or The Favick Reset facial. These 90-minute appointments give us time to carry out a thorough consultation, professionally assess your skin, understand your current skincare routine and lifestyle, and provide your first personalised treatment, all in one visit.\n\nWe'll also create a tailored treatment plan to help you achieve your skin goals. If your skin is ready, you may be able to progress to more advanced treatments as early as the following week.",
+      treatments:[
+        {
+          slug:'the-favick-reveal',
+          name:'The Favick Reveal',
+          duration:'90 minutes',
+          price:'80',
+          description:"Your introduction to the Favick experience. Designed for first-time clients, this appointment combines an in-depth consultation with a personalised glow-boosting facial tailored to your skin's unique needs.\n\nTreatment includes:\n- Comprehensive consultation\n- Professional skin analysis\n- Review of your current skincare routine and lifestyle\n- Personalised treatment plan\n- Double cleanse\n- Gentle painless peel\n- Targeted treatment serum\n- Relaxing facial massage\n- Hydrating mask\n- Moisturiser and SPF application\n- Personalised home-care and aftercare advice\n\nIdeal for:\n- First-time clients\n- Anyone wanting a professional skin assessment before starting a treatment plan\n\nYou'll leave with:\nA clearer understanding of your skin, your first personalised treatment, expert skincare advice, and a tailored plan to help you achieve healthy, glowing skin.",
+        },
+        {
+          slug:'the-favick-reset',
+          name:'The Favick Reset',
+          duration:'90 minutes',
+          price:'80',
+          description:"A calming, restorative treatment designed to rebalance and refresh skin that's feeling stressed, tired, or in need of a reset.\n\nTreatment includes:\n- Comprehensive consultation\n- Professional skin analysis\n- Review of your current skincare routine and lifestyle\n- Personalised treatment plan\n- Double cleanse\n- Gentle exfoliation\n- Targeted treatment serum\n- Relaxing facial massage\n- Restorative mask\n- Moisturiser and SPF application\n- Personalised home-care and aftercare advice\n\nIdeal for:\n- First-time clients\n- Anyone whose skin needs a fresh start before beginning a targeted treatment plan\n\nYou'll leave with:\nCalmer, healthier-looking skin, expert guidance, your first personalised treatment, and a tailored plan for your next steps.",
+        },
+      ],
+    },
     CORE_CATEGORIES:[
       {
         id:'facials',
@@ -114,13 +138,13 @@ const API_ENDPOINTS = {
             price:'75',
             description:"Designed specifically for new mothers navigating melasma, hyperpigmentation, dullness, and the hormonal skin changes that often follow pregnancy. This facial combines a gentle skin analysis, a hydrating treatment, and a relaxing facial massage tailored to skin that's still finding its balance post-birth. You'll leave with a personalised skin plan to support your recovery and confidence, one appointment at a time.",
           },
-          {
-            slug:'favick-bespoke-facial',
-            name:'Favick Bespoke Facial',
-            duration:'75 mins',
-            price:'95',
-            description:"Experience the ultimate in skin revitalisation with our luxurious bespoke facial, designed specifically for your unique skin needs. This session begins with a thorough consultation to address concerns like acne, pigmentation, dehydration, and more. Every element of your facial is tailored using selected products and techniques to ensure safe, effective results. Your treatment includes a personalised skin consultation, double cleanse, gentle exfoliation, and, if needed, extractions. A customised mask, professional serums, moisturiser, and SPF protection will enhance your glow. Enjoy a relaxing face, decolletage, and scalp massage, along with personalised aftercare advice. The result is deeply cleansed, balanced, hydrated, and radiant skin, with a plan tailored to your individual goals.",
-          },
+          // {
+          //   slug:'favick-bespoke-facial',
+          //   name:'Favick Bespoke Facial',
+          //   duration:'75 mins',
+          //   price:'95',
+          //   description:"Experience the ultimate in skin revitalisation with our luxurious bespoke facial, designed specifically for your unique skin needs. This session begins with a thorough consultation to address concerns like acne, pigmentation, dehydration, and more. Every element of your facial is tailored using selected products and techniques to ensure safe, effective results. Your treatment includes a personalised skin consultation, double cleanse, gentle exfoliation, and, if needed, extractions. A customised mask, professional serums, moisturiser, and SPF protection will enhance your glow. Enjoy a relaxing face, decolletage, and scalp massage, along with personalised aftercare advice. The result is deeply cleansed, balanced, hydrated, and radiant skin, with a plan tailored to your individual goals.",
+          // },
         ]
       },
       {

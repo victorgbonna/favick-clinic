@@ -50,7 +50,7 @@ const testimonials = [
 
 export default function Testimonials({
   sectionLabel = "Testimonials",
-  heading = "Skin stories, told honestly",
+  heading = "What Our Clients Say",
   description = "Read their full treatment experience, from interest to visible results.",
   className = "",
 }) {

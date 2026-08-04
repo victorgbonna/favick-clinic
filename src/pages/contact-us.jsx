@@ -34,7 +34,13 @@ const contactCards = [
 export default function ContactUsPage() {
   return (
     <div className="bg-surface pt-24 tablet:pt-10">
-      <PageMeta title="Contact Us" description="Contact Favick Skin Clinic in Aberdeen to book a consultation, discuss your skin concerns or plan your next treatment." />
+      <PageMeta
+        title="Contact Us"
+        description="Contact Favick Skin Clinic in Aberdeen to book a consultation, ask about treatments or get help choosing your next skin appointment."
+        path="/contact-us"
+        ogTitle="Contact Favick Skin Clinic"
+        ogDescription="Speak with Favick Skin Clinic about appointments, treatment guidance, WhatsApp support and clinic enquiries."
+      />
       <section className="bg-[#f8f8f6] px-6 py-20 text-center tablet:px-5 tablet:py-14 md:px-12 lg:px-20">
         <div className="mx-auto max-w-4xl">
           <ScrollReveal as="p" variant="up" className="monte text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Contact Us</ScrollReveal>

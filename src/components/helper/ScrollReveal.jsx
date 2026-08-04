@@ -13,6 +13,7 @@ export default function ScrollReveal({
   variant = "up",
   delay = 0,
   threshold = 0.16,
+  ...props
 }) {
   const elementRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -43,6 +44,7 @@ export default function ScrollReveal({
       ref={elementRef}
       className={`py-3 scroll-reveal scroll-reveal--${variant} ${isVisible ? "is-revealed" : ""} ${className}`}
       style={{ "--reveal-delay": `${delay}ms` }}
+      {...props}
     >
       {children}
     </Tag>

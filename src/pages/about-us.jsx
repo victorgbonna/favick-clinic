@@ -173,7 +173,13 @@ function SectionCta({
 export default function AboutUPage() {
   return (
     <div className="bg-surface">
-      <PageMeta title="About Us" description="Meet and discover Favick Skin Clinic's expert-led, personalised approach to healthy skin for every skin tone." />
+      <PageMeta
+        title="About Us"
+        description="Meet Favick Skin Clinic and discover Faith Aminaho's expert-led, personalised approach to healthy skin for every skin tone."
+        path="/about-us"
+        ogTitle="About Favick Skin Clinic"
+        ogDescription="Learn about the clinic's thoughtful, skin-first approach to consultations, treatments and long-term skin confidence."
+      />
       {/* <EditorialHero />
       <MeetFaith /> */}
       <HeroSection/>
