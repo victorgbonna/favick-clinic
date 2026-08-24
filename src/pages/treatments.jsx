@@ -173,7 +173,7 @@ export default function TreatmentsPage() {
           </ScrollReveal>
 
           {selectedCategory ? (
-            <ScrollReveal variant="scale" delay={80} className="mt-8 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
+            <div className="mt-8 rounded-3xl border border-[#ece8df] bg-[#fbfaf8] p-6 md:p-10">
               <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
                 <div>
                   <h3 className="playfair text-3xl font-bold text-[#0d1b34]">{selectedCategory.name}</h3>
@@ -200,7 +200,7 @@ export default function TreatmentsPage() {
                   <TreatmentCard key={treatment.slug} treatment={treatment} delay={index * 75} />
                 ))}
               </div>
-            </ScrollReveal>
+            </div>
           ) : null}
         </section>
 
