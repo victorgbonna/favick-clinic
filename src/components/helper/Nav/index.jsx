@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ImageContainer from './../ImageContainer';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -42,9 +42,6 @@ function PhoneNav({nav_list, scrolledPast, activeNav}){
     return(
         <div className={`pc:hidden bigpc:hidden text-black tablet:hidden phone:block transition-[background-color,box-shadow] duration-300 ease-out ${scrolledPast ? 'bg-[#F8F8F6]' : 'bg-transparent'}`}
         >
-        <div className="bg-[#d4af37] w-full text-center text-[#0d1b34]">
-            <PromoBanner/>
-        </div>
         <div className='flex justify-between tablet:block tablet:p-4 items-center px-6 py-0'>
            <div className="flex justify-between items-center">
             <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center'>
@@ -101,9 +98,6 @@ function PcNav({nav_list, scrolledPast, activeNav}){
      <div
         className="phone:hidden fixed top-0 left-0 right-0 z-50 w-full bg-surface backdrop-blur-xl border-outline-variant/5 transition-all duration-300 ease-out"
         >
-         <div className=" py-[4px] w-full text-center text-[#0d1b34]">
-            <PromoBanner/>
-        </div>   
         <div className="max-w-[1280px] mx-auto px-[80px] py-3 flex items-center justify-between">
             <Link href={PAGE_ROUTES.HOME} className='inline-flex items-center transition-transform duration-300 ease-out hover:-translate-y-0.5'>
                 <Image
@@ -136,32 +130,3 @@ function PcNav({nav_list, scrolledPast, activeNav}){
     </div>
     )
 }
-
-
-function PromoBanner() {
-     const [activeMessage, setActiveMessage] = useState(0);
-
-  const messages = [
-    <>
-        To enjoy 20% off all treatments.
-    </>,
-    <>
-      Book your treatment and use code <strong>GLOW20</strong> at checkout.
-    </>,
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveMessage((current) => (current + 1) % messages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-    return (
-        <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
-            <p className="monte promo-fade text-[13px] font-medium tracking-[0.08em]">
-                {messages[activeMessage]}
-            </p>
-        </div>
-    );
-}   

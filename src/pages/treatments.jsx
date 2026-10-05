@@ -130,10 +130,6 @@ export default function TreatmentsPage() {
         </ScrollReveal>
       </header>
 
-      {/* <div className="bg-[#d4af37] px-6 py-3 text-center text-[#0d1b34]">
-        <p className="monte text-[11px] font-semibold uppercase tracking-[0.16em]">Use code GLOW20 at checkout.</p>
-      </div> */}
-
       <nav className="sticky top-[88px] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 py-4">
         <div className="max-w-7xl mx-auto flex overflow-x-auto pb-3 tablet:flex-nowrap tablet:justify-start justify-start gap-8 px-6 tablet:pl-4 tablet:px-2 tablet:gap-x-20">
           <Link href="#treatments" className="monte cursor-pointer uppercase text-[11px] tracking-[0.22em] text-on-surface-variant hover:text-gold shrink-0 w-fit tablet:w-auto tablet:text-sm text-center tablet:text-left">Treatments</Link>

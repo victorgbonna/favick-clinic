@@ -171,7 +171,7 @@ const API_ENDPOINTS = {
             slug:'six-in-one-course-of-3',
             name:'6in1 Facial - Course of 3',
             duration:'3 hrs total',
-            price:'255 (save 10%)',
+            price:'255',
             description:'For visible, longer-lasting results, a course of three 6in1 Facials spaced across a few weeks allows skin to rebuild texture and radiance progressively, ideal for congested, dull, or uneven skin.',
           },
         ]
@@ -193,7 +193,7 @@ const API_ENDPOINTS = {
             slug:'signature-peel-course-of-3',
             name:'Signature Peel - Course of 3',
             duration:'2 hrs 15 mins total',
-            price:'165 (save 8%)',
+            price:'165',
             description:'A course of three peels, spaced a few weeks apart, allows for deeper skin renewal and more visible improvement over time than a single session alone.',
           },
         ]
@@ -215,8 +215,8 @@ const API_ENDPOINTS = {
             slug:'microneedling-course-of-3',
             name:'Microneedling - Course of 3',
             duration:'3 hrs 45 mins total',
-            price:'320 (save 11%)',
-            description:"Elevate your skincare routine with our exclusive Course of 3 bundle, featuring transformative microneedling treatments. This multi-session package rejuvenates your skin, minimises imperfections, and enhances your natural glow. Booking multiple sessions ensures consistent care and attention for your skin, guided by our skilled professionals throughout your journey to healthier skin.",
+            price:'320',
+            description:"Elevate your skincare routine with our Course of 3 bundle, featuring transformative microneedling treatments. This multi-session package rejuvenates your skin, minimises imperfections, and enhances your natural glow. Booking multiple sessions ensures consistent care and attention for your skin, guided by our skilled professionals throughout your journey to healthier skin.",
           },
         ]
       },
@@ -237,7 +237,7 @@ const API_ENDPOINTS = {
             slug:'mesotherapy-course-of-3',
             name:'Mesotherapy - Course of 3',
             duration:'3 hrs 45 mins total',
-            price:'330 (save 8%)',
+            price:'330',
             description:'Discover a revitalising journey for your skin with our tailored Course of 3 treatment bundle. This package includes a series of mesotherapy sessions that work synergistically to hydrate, brighten, and rejuvenate your complexion. Enjoy the convenience of multiple sessions combined, allowing for deeper skin renewal and care over time.',
           },
         ]
@@ -303,7 +303,7 @@ const API_ENDPOINTS = {
             name:'Favick Skin Membership - Quarterly Coaching Programme',
             duration:'3 months',
             price:'180',
-            description:'A 3-month virtual skincare coaching programme for clients who want ongoing, hands-on guidance rather than a single one-off consultation. You will start with an in-depth consultation, receive a personalised, curated skincare routine, and get two check-ins a month plus direct WhatsApp support throughout your 3 months. Membership is limited to 10-15 members per quarterly intake, so spaces are offered on a rolling basis as each new quarter opens. Longer commitments are available: 6 months (£330, save £30), 12 months (£600, save £120), or rolling monthly with no commitment (£70/month).',
+            description:'A 3-month virtual skincare coaching programme for clients who want ongoing, hands-on guidance rather than a single one-off consultation. You will start with an in-depth consultation, receive a personalised, curated skincare routine, and get two check-ins a month plus direct WhatsApp support throughout your 3 months. Membership is limited to 10-15 members per quarterly intake, so spaces are offered on a rolling basis as each new quarter opens. Longer commitments are available: 6 months (£330), 12 months (£600), or rolling monthly with no commitment (£70/month).',
           },
         ]
       },
